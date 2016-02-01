@@ -12,8 +12,8 @@
 
 @interface FZZInfoViewController : UIViewController
 
-@property (nonatomic,strong) NSMutableArray *data;
-@property (nonatomic,weak) id<FZZInfoViewControllerDelegate>delegate;
+@property (nonatomic, strong) NSMutableArray *data;
+@property (nonatomic, weak) id<FZZInfoViewControllerDelegate>delegate;
 
 @property (nonatomic, copy) NSString *supportSiteURLString;
 @property (nonatomic, copy) NSString *appIDString;

@@ -19,6 +19,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+
+}
+
+- (void)viewDidAppear:(BOOL)animated{
     FZZInfoViewController *vc = [FZZInfoViewController new];
     vc.appIDString = @"480099135";
     vc.developerIDString = @"457011383";

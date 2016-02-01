@@ -13,10 +13,10 @@
 #import <StoreKit/StoreKit.h>
 
 //オープンソースライブラリ
-#import <SVProgressHUD.h>
-#import <AFNetworking.h>
-#import <UIKit+AFNetworking.h>
-#import <RMUniversalAlert.h>
+#import "SVProgressHUD.h"
+#import "AFNetworking.h"
+#import "UIKit+AFNetworking.h"
+#import "RMUniversalAlert.h"
 
 static NSString *const kAPIResults = @"results";
 static NSString *const kAPITrackName = @"trackName";
@@ -87,24 +87,33 @@ UINavigationControllerDelegate>
     
     __weak FZZInfoViewController *weakSelf = self;
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:[NSString stringWithFormat:@"https://itunes.apple.com/lookup?id=%@&entity=software",self.developerIDString]
-      parameters:nil
-         success:^(AFHTTPRequestOperation *operation, id responseObject) {
-             [weakSelf setSupportDictionary];
-             [weakSelf setInfomationDictionary];
-             [weakSelf setAppDictionaryWithResponse:responseObject];
-             [weakSelf setAcknowledgementDictionary];
-             [weakSelf.tableView reloadData];
-             [SVProgressHUD dismiss];
-         }
-         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-             [weakSelf setSupportDictionary];
-             [weakSelf setInfomationDictionary];
-             [weakSelf setAcknowledgementDictionary];
-             [weakSelf.tableView reloadData];
-             [SVProgressHUD dismiss];
-         }];
+    NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/lookup?id=%@&entity=software",self.developerIDString];
+    NSURL* url = [NSURL URLWithString:urlString];
+    NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession* session = [NSURLSession sessionWithConfiguration:config];
+    
+    NSURLSessionDataTask* task =
+    [session dataTaskWithURL:url
+           completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+               
+               if(!error){
+                   [weakSelf setSupportDictionary];
+                   [weakSelf setInfomationDictionary];
+                   [weakSelf setAppDictionaryWithResponse:data];
+                   [weakSelf setAcknowledgementDictionary];
+               }else{
+                   [weakSelf setSupportDictionary];
+                   [weakSelf setInfomationDictionary];
+                   [weakSelf setAcknowledgementDictionary];
+               }
+
+               dispatch_async(dispatch_get_main_queue(), ^{
+                   [weakSelf.tableView reloadData];
+                   [SVProgressHUD dismiss];
+               });
+           }];
+    
+    [task resume];
     
 }
 
@@ -167,10 +176,12 @@ UINavigationControllerDelegate>
 - (void)setAppDictionaryWithResponse:(id)responseObject {
     NSUInteger index = 0;
     
+     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+    
     _data[kApp][kName] = NSLocalizedStringFromTable(@"by This Developer",kLocalizeFile,nil);
     _data[kApp][kRows] = [NSMutableArray array];
     
-    for (NSDictionary *app in responseObject[kAPIResults]) {
+    for (NSDictionary *app in jsonDict[kAPIResults]) {
         if([app.allKeys containsObject:kAPITrackName]){
             @autoreleasepool {
                 NSString *appName = [app[kAPITrackName] componentsSeparatedByString:@"-"][0];

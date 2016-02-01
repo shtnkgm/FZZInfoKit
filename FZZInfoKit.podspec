@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FZZInfoKit"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "設定（インフォメーション）画面をかんたんに作成"
 
   s.description  = "FZZInfoKitの概要（作成中）文章..............................................................."
@@ -16,11 +16,13 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.source       = { :git => "https://shtnkgm@bitbucket.org/shtnkgm/fzzinfokit.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://shtnkgm@bitbucket.org/shtnkgm/fzzinfokit.git", :tag => s.version }
 
   s.source_files  = "FZZInfoKit/FZZInfoViewController.{h,m}", "FZZInfoKit/FZZInfoCell.{h,m}"
 
   s.resources  = "FZZInfoKit/FZZInfoCell.xib", "FZZInfoKit/FZZInfoViewController.xib", "FZZInfoKit/Resources/*"
+
+  s.ios.resource_bundle = { 'FZZInfoKit-iOS' => ['FZZInfoKit/Resources/*.lproj']}
 
   s.framework  = 'StoreKit', 'Foundation', 'UIKit'
 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FZZInfoViewController">
+            <connections>
+                <outlet property="navigationBar" destination="cuc-jN-vv1" id="r5m-g9-X5s"/>
+                <outlet property="tableView" destination="DG5-DU-IQ0" id="REz-KX-2Dt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuc-jN-vv1">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="XoE-Is-aBe"/>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="DG5-DU-IQ0">
+                    <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <inset key="separatorInset" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cuc-jN-vv1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="45H-dH-d6Y"/>
+                <constraint firstAttribute="trailing" secondItem="cuc-jN-vv1" secondAttribute="trailing" id="C9P-rW-KRj"/>
+                <constraint firstAttribute="trailing" secondItem="DG5-DU-IQ0" secondAttribute="trailing" id="HsJ-ld-0jM"/>
+                <constraint firstAttribute="bottom" secondItem="DG5-DU-IQ0" secondAttribute="bottom" id="Kjv-Cv-aHG"/>
+                <constraint firstItem="DG5-DU-IQ0" firstAttribute="top" secondItem="cuc-jN-vv1" secondAttribute="bottom" id="NFF-oi-AtN"/>
+                <constraint firstItem="cuc-jN-vv1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mrd-hx-chP"/>
+                <constraint firstItem="DG5-DU-IQ0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pHT-ea-PKc"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="139" y="154"/>
+        </view>
+    </objects>
+</document>

@@ -15,10 +15,10 @@
 		C3A2C6261C5F4B3C00FE057B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A2C6251C5F4B3C00FE057B /* Assets.xcassets */; };
 		C3A2C6291C5F4B3C00FE057B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A2C6271C5F4B3C00FE057B /* LaunchScreen.storyboard */; };
 		C3A2C6371C5F4B5600FE057B /* FZZInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2C6311C5F4B5600FE057B /* FZZInfoCell.m */; };
-		C3A2C6381C5F4B5600FE057B /* FZZInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A2C6321C5F4B5600FE057B /* FZZInfoCell.xib */; };
 		C3A2C6391C5F4B5600FE057B /* FZZInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2C6341C5F4B5600FE057B /* FZZInfoViewController.m */; };
-		C3A2C63A1C5F4B5600FE057B /* FZZInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A2C6351C5F4B5600FE057B /* FZZInfoViewController.xib */; };
 		C3A2C6771C5F95D800FE057B /* FZZInfoViewControllerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3A2C6751C5F95D800FE057B /* FZZInfoViewControllerLocalizable.strings */; };
+		C3A2C6811C60E99700FE057B /* FZZInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A2C67F1C60E99700FE057B /* FZZInfoCell.xib */; };
+		C3A2C6821C60E99700FE057B /* FZZInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A2C6801C60E99700FE057B /* FZZInfoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,12 +37,12 @@
 		C3A2C62A1C5F4B3C00FE057B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3A2C6301C5F4B5600FE057B /* FZZInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZZInfoCell.h; sourceTree = "<group>"; };
 		C3A2C6311C5F4B5600FE057B /* FZZInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZZInfoCell.m; sourceTree = "<group>"; };
-		C3A2C6321C5F4B5600FE057B /* FZZInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FZZInfoCell.xib; sourceTree = "<group>"; };
 		C3A2C6331C5F4B5600FE057B /* FZZInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZZInfoViewController.h; sourceTree = "<group>"; };
 		C3A2C6341C5F4B5600FE057B /* FZZInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZZInfoViewController.m; sourceTree = "<group>"; };
-		C3A2C6351C5F4B5600FE057B /* FZZInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FZZInfoViewController.xib; sourceTree = "<group>"; };
 		C3A2C6761C5F95D800FE057B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resouces/en.lproj/FZZInfoViewControllerLocalizable.strings; sourceTree = "<group>"; };
 		C3A2C6781C5F95E800FE057B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resouces/ja.lproj/FZZInfoViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		C3A2C67F1C60E99700FE057B /* FZZInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FZZInfoCell.xib; path = Resouces/FZZInfoCell.xib; sourceTree = "<group>"; };
+		C3A2C6801C60E99700FE057B /* FZZInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FZZInfoViewController.xib; path = Resouces/FZZInfoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,13 +95,11 @@
 		C3A2C6181C5F4B3C00FE057B /* FZZInfoKit */ = {
 			isa = PBXGroup;
 			children = (
-				C3A2C6751C5F95D800FE057B /* FZZInfoViewControllerLocalizable.strings */,
+				C3A2C6831C60E9A300FE057B /* Resources */,
 				C3A2C6301C5F4B5600FE057B /* FZZInfoCell.h */,
 				C3A2C6311C5F4B5600FE057B /* FZZInfoCell.m */,
-				C3A2C6321C5F4B5600FE057B /* FZZInfoCell.xib */,
 				C3A2C6331C5F4B5600FE057B /* FZZInfoViewController.h */,
 				C3A2C6341C5F4B5600FE057B /* FZZInfoViewController.m */,
-				C3A2C6351C5F4B5600FE057B /* FZZInfoViewController.xib */,
 				C3A2C61C1C5F4B3C00FE057B /* AppDelegate.h */,
 				C3A2C61D1C5F4B3C00FE057B /* AppDelegate.m */,
 				C3A2C61F1C5F4B3C00FE057B /* ViewController.h */,
@@ -121,6 +119,16 @@
 				C3A2C61A1C5F4B3C00FE057B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3A2C6831C60E9A300FE057B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3A2C6751C5F95D800FE057B /* FZZInfoViewControllerLocalizable.strings */,
+				C3A2C6801C60E99700FE057B /* FZZInfoViewController.xib */,
+				C3A2C67F1C60E99700FE057B /* FZZInfoCell.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,11 +193,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3A2C6291C5F4B3C00FE057B /* LaunchScreen.storyboard in Resources */,
+				C3A2C6811C60E99700FE057B /* FZZInfoCell.xib in Resources */,
 				C3A2C6261C5F4B3C00FE057B /* Assets.xcassets in Resources */,
-				C3A2C6381C5F4B5600FE057B /* FZZInfoCell.xib in Resources */,
+				C3A2C6821C60E99700FE057B /* FZZInfoViewController.xib in Resources */,
 				C3A2C6771C5F95D800FE057B /* FZZInfoViewControllerLocalizable.strings in Resources */,
 				C3A2C6241C5F4B3C00FE057B /* Main.storyboard in Resources */,
-				C3A2C63A1C5F4B5600FE057B /* FZZInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

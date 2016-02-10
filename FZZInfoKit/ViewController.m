@@ -22,11 +22,9 @@
 
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{    
     FZZInfoViewController *vc = [FZZInfoViewController new];
     vc.appIDString = @"480099135";
-    vc.developerIDString = @"457011383";
-    vc.supportSiteURLString = @"http://shtnkgm.github.io";
     
     vc.delegate = self;
     [self presentViewController:vc

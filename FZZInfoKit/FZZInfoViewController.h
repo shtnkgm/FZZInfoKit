@@ -14,10 +14,8 @@
 
 @property (nonatomic, strong) NSMutableArray *data;
 @property (nonatomic, weak) id<FZZInfoViewControllerDelegate>delegate;
-
-@property (nonatomic, copy) NSString *supportSiteURLString;
 @property (nonatomic, copy) NSString *appIDString;
-@property (nonatomic, copy) NSString *developerIDString;
+
 
 @end
 

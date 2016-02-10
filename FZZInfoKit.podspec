@@ -16,4 +16,6 @@ Pod::Spec.new do |s|
   s.dependency 'RMUniversalAlert'
   s.dependency 'SVProgressHUD'
 
+  s.xcconfig = { "APPLY_RULES_IN_COPY_FILES" => "YES", "STRINGS_FILE_OUTPUT_ENCODING" => "binary" }
+
 end

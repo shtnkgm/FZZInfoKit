@@ -1,0 +1,34 @@
+/*
+ FZZInfoViewControllerLocalizable.strings
+ CommonParts
+ 
+ Created by Administrator on 2014/10/11.
+ Copyright (c) 2014年 Shota Nakagami. All rights reserved.
+ */
+
+"Network Error" = "通信エラー";
+
+"Info" = "情報";
+
+"App Support" = "サポート情報";
+"App Infomation" = "アプリ情報";
+"Other" = "その他";
+
+"by This Developer" = "その他のアプリ";
+"Suport Site" = "サポートサイト";
+"Rate This App" = "アプリのレビューを書く";
+"Bug Report" = "問題を報告";
+"AppName" = "アプリ名";
+"Version" = "バージョン";
+"AppStore" = "AppStoreを開く";
+
+"Open suport site in Safari?" = "Safariでサポートサイトを開きますか？";
+"Open link in Safari?" = "Safariでリンクを開きますか？";
+"Cancel" = "キャンセル";
+
+"Unable to send email" = "メールアカウント未設定";
+"Please visit the Mail assistant" = "[ホーム画面]>[設定]>[メール/連絡先/カレンダー]でメールアカウントの設定をして下さい。";
+"User" = "ユーザー";
+"Privacy Policy" = "プライバシーポリシー";
+
+"Success!" = "完了しました!";

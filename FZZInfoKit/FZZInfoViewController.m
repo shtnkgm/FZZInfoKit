@@ -47,6 +47,13 @@ UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
+@property (nonatomic, copy) NSString *supportSiteURL;
+@property (nonatomic, copy) NSString *developerID;
+@property (nonatomic, copy) NSString *icons8URL;
+@property (nonatomic, copy) NSString *bugReportURL;
+@property (nonatomic, copy) NSString *privacyPolicyURL;
+@property (nonatomic, copy) NSString *reviewPageURL;
+
 @end
 
 @implementation FZZInfoViewController
@@ -60,6 +67,14 @@ UINavigationControllerDelegate>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.developerID = @"457011383";
+    self.supportSiteURL = @"http://shtnkgm.github.io";
+    self.icons8URL = @"https://icons8.com";
+    self.bugReportURL = @"http://goo.gl/forms/aw8K7qvoB9";
+    self.privacyPolicyURL = @"http://shtnkgm.github.io/privacy.html";
+    self.reviewPageURL = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",self.appIDString];
+    
     
     UINib *nib = [UINib nibWithNibName:@"FZZInfoCell" bundle:nil];
     [_tableView registerNib:nib forCellReuseIdentifier:@"InfoCell"];
@@ -87,7 +102,7 @@ UINavigationControllerDelegate>
     
     __weak FZZInfoViewController *weakSelf = self;
     
-    NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/lookup?id=%@&entity=software",self.developerIDString];
+    NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/lookup?id=%@&entity=software",self.developerID];
     NSURL* url = [NSURL URLWithString:urlString];
     NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession* session = [NSURLSession sessionWithConfiguration:config];
@@ -138,15 +153,19 @@ UINavigationControllerDelegate>
     _data[kSupport][kRows] = [NSMutableArray array];
     [_data[kSupport][kRows] addObject:[NSMutableDictionary dictionary]];
     [_data[kSupport][kRows] addObject:[NSMutableDictionary dictionary]];
+    [_data[kSupport][kRows] addObject:[NSMutableDictionary dictionary]];
     
     _data[kSupport][kRows][index][kName] = NSLocalizedStringFromTable(@"Suport Site",kLocalizeFile,nil);
     _data[kSupport][kRows][index][kAction] = @YES;
-    //_data[kSupport][kRows][index][kFile] = @"mail";
     index++;
     
     _data[kSupport][kRows][index][kName] = NSLocalizedStringFromTable(@"Rate This App",kLocalizeFile,nil);
     _data[kSupport][kRows][index][kAction] = @YES;
-    //_data[kSupport][kRows][index][kFile] = @"review";
+    index++;
+    
+    _data[kSupport][kRows][index][kName] = NSLocalizedStringFromTable(@"Bug Report",kLocalizeFile,nil);
+    _data[kSupport][kRows][index][kAction] = @YES;
+
 }
 
 - (void)setInfomationDictionary {
@@ -199,13 +218,16 @@ UINavigationControllerDelegate>
 }
 
 - (void)setAcknowledgementDictionary {
-    
-    _data[kAcknowledgement][kName] = NSLocalizedStringFromTable(@"Acknowledgement",kLocalizeFile,nil);
+    _data[kAcknowledgement][kName] = NSLocalizedStringFromTable(@"Other",kLocalizeFile,nil);
     _data[kAcknowledgement][kRows] = [NSMutableArray array];
+    [_data[kAcknowledgement][kRows] addObject:[NSMutableDictionary dictionary]];
     [_data[kAcknowledgement][kRows] addObject:[NSMutableDictionary dictionary]];
     
     NSUInteger index = 0;
     _data[kAcknowledgement][kRows][index][kName] = NSLocalizedStringFromTable(@"icons8",kLocalizeFile,nil);
+    _data[kAcknowledgement][kRows][index][kAction] = @YES;
+    index++;
+    _data[kAcknowledgement][kRows][index][kName] = NSLocalizedStringFromTable(@"Privacy Policy",kLocalizeFile,nil);
     _data[kAcknowledgement][kRows][index][kAction] = @YES;
 }
 
@@ -236,18 +258,22 @@ UINavigationControllerDelegate>
         }
         if(indexPath.row==2){
             [self openAppStoreWithAppId:self.appIDString];
-            
             return;
         }
     }
     
     if(indexPath.section==kSupport){
         if(indexPath.row==0){
-            [self openSuportSite];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_supportSiteURL]];
         }
         
         if(indexPath.row==1){
-            [self openReviewPage];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_reviewPageURL]];
+        }
+        
+        if(indexPath.row==2){
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_bugReportURL]];
+            return;
         }
     }
     
@@ -259,21 +285,16 @@ UINavigationControllerDelegate>
         if(indexPath.row==0){
             [self showJumpToIcons8Dialog];
         }
+        if(indexPath.row==1){
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_privacyPolicyURL]];
+            return;
+        }
     }
 }
 
 # pragma mark UITableViewDataSource
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     return _data[section][kName];
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
-    if(section == kSupport){
-        
-        NSString *message = [NSString stringWithFormat:NSLocalizedStringFromTable(@"If you enjoy using %@, would you mind taking a moment to rate it? It won’t take more than a minute. Thanks for your support!", kLocalizeFile,nil),[[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"]];
-        return message;
-    }
-    return nil;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -360,28 +381,7 @@ UINavigationControllerDelegate>
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-# pragma mark サポートサイト
-- (void)openSuportSite{
-    [RMUniversalAlert showAlertInViewController:self
-                                      withTitle:self.supportSiteURLString
-                                        message:NSLocalizedStringFromTable(@"Open suport site in Safari?",kLocalizeFile,nil)
-                              cancelButtonTitle:NSLocalizedStringFromTable(@"Cancel",kLocalizeFile,nil)
-                         destructiveButtonTitle:nil
-                              otherButtonTitles:@[@"OK"]
-                                       tapBlock:^(RMUniversalAlert *alert,NSInteger buttonIndex){
-                                           if(buttonIndex == alert.firstOtherButtonIndex){
-                                               [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.supportSiteURLString]];
-                                           }
-                                       }];
-
-}
-
-# pragma mark レビュー
-
-- (void)openReviewPage{
-    NSString *urlString = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",self.appIDString];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
-}
+# pragma mark icons8
 
 - (void)showJumpToIcons8Dialog{
     __weak typeof(self) weakSelf = self;
@@ -399,7 +399,7 @@ UINavigationControllerDelegate>
 }
 
 - (void)openIcons8Page{
-    NSString *urlString = @"https://icons8.com";
+    NSString *urlString = _icons8URL;
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 

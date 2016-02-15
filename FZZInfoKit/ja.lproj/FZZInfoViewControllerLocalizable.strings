@@ -8,27 +8,24 @@
 
 "Network Error" = "通信エラー";
 
+//ナビゲーションタイトル
 "Info" = "情報";
+"Close" = "閉じる";
 
-"App Support" = "サポート情報";
-"App Infomation" = "アプリ情報";
-"Other" = "その他";
+//セクション名
+"User Feedback" = "フィードバック";
+"Developer" = "アプリ開発元";
+"Credit" = "クレジット";
 
-"by This Developer" = "その他のアプリ";
-"Suport Site" = "サポートサイト";
-"Rate This App" = "アプリのレビューを書く";
-"Bug Report" = "問題を報告";
-"AppName" = "アプリ名";
-"Version" = "バージョン";
+//アクション名
+"Web Site" = "Webサイト";
+"Rate/Review in AppStore" = "AppStoreのレビューを書く";
+"Report a bug" = "問題を報告";
 "AppStore" = "AppStoreを開く";
-
-"Open suport site in Safari?" = "Safariでサポートサイトを開きますか？";
-"Open link in Safari?" = "Safariでリンクを開きますか？";
-"Cancel" = "キャンセル";
-
-"Unable to send email" = "メールアカウント未設定";
-"Please visit the Mail assistant" = "[ホーム画面]>[設定]>[メール/連絡先/カレンダー]でメールアカウントの設定をして下さい。";
-"User" = "ユーザー";
+"Tell a friend" = "友達にすすめる";
+"Other Apps" = "その他のアプリ";
 "Privacy Policy" = "プライバシーポリシー";
 
-"Success!" = "完了しました!";
+//情報名
+"AppName" = "アプリ名";
+"Version" = "バージョン";

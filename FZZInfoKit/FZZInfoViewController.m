@@ -14,34 +14,26 @@
 
 //オープンソースライブラリ
 #import "SVProgressHUD.h"
-#import "AFNetworking.h"
-#import "UIKit+AFNetworking.h"
 #import "RMUniversalAlert.h"
-
-static NSString *const kAPIResults = @"results";
-static NSString *const kAPITrackName = @"trackName";
-static NSString *const kAPITrackId = @"trackId";
-static NSString *const kAPIArtworkUrl60 = @"artworkUrl60";
 
 static NSString *const kName = @"name";
 static NSString *const kRows = @"rows";
 static NSString *const kValue = @"value";
 static NSString *const kUrl = @"url";
-static NSString *const kAction = @"action";
 static NSString *const kFile = @"file";
 static NSString *const kAppId = @"appid";
 
-static const NSInteger kSupport = 0;
-static const NSInteger kApp = 2;
-static const NSInteger kInfo = 1;
-static const NSInteger kAcknowledgement = 3;
+ 
+static const NSInteger kSupportSection   = 0;
+static const NSInteger kDeveloperSection = 1;
+static const NSInteger kCreditSection    = 2;
+
 
 static NSString *const kLocalizeFile = @"FZZInfoViewControllerLocalizable";
 
 @interface FZZInfoViewController ()
 <UITableViewDataSource,
 UITableViewDelegate,
-SKStoreProductViewControllerDelegate,
 UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -52,7 +44,10 @@ UINavigationControllerDelegate>
 @property (nonatomic, copy) NSString *icons8URL;
 @property (nonatomic, copy) NSString *bugReportURL;
 @property (nonatomic, copy) NSString *privacyPolicyURL;
+@property (nonatomic, copy) NSString *appstoreURL;
 @property (nonatomic, copy) NSString *reviewPageURL;
+@property (nonatomic, copy) NSString *otherAppsURL;
+@property (nonatomic, copy) NSString *appName;
 
 @end
 
@@ -68,68 +63,50 @@ UINavigationControllerDelegate>
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    //初期化
+    self.appName = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"];
     self.developerID = @"457011383";
     self.supportSiteURL = @"http://shtnkgm.github.io";
     self.icons8URL = @"https://icons8.com";
-    self.bugReportURL = @"http://goo.gl/forms/aw8K7qvoB9";
+    self.bugReportURL = @"http://goo.gl/forms/glkS7fBe1V";
     self.privacyPolicyURL = @"http://shtnkgm.github.io/privacy.html";
-    self.reviewPageURL = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",self.appIDString];
+    self.appstoreURL = [NSString stringWithFormat:@"https://itunes.apple.com/app/id%@",_appIDString];
+    self.reviewPageURL = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",_appIDString];
+    self.otherAppsURL = @"itms-apps://itunes.com/apps/shotanakagami";
     
-    
+    //TableViewセルの初期化
     UINib *nib = [UINib nibWithNibName:@"FZZInfoCell" bundle:nil];
     [_tableView registerNib:nib forCellReuseIdentifier:@"InfoCell"];
+    
     
     _data = [NSMutableArray array];
     [_data addObject:[NSMutableDictionary dictionary]];
     [_data addObject:[NSMutableDictionary dictionary]];
     [_data addObject:[NSMutableDictionary dictionary]];
-    [_data addObject:[NSMutableDictionary dictionary]];
     
-    //完了ボタンの作成
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+    [self setSupportDictionary];
+    [self setDeveloperDictionary];
+    [self setCreditDictionary];
+    
+    //閉じるボタンの作成
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTable(@"Close",kLocalizeFile,nil)
+                                                                   style:UIBarButtonItemStyleDone
                                                                                 target:self
                                                                                 action:@selector(doneButtonDidPushed:)];
+    
     _navigationBar.topItem.leftBarButtonItem = doneButton;
     
     //タイトルの初期化
-    _navigationBar.topItem.title = nil;
+    //_navigationBar.topItem.title = nil;
+    NSString *title = _appName;
+    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
     
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-    [SVProgressHUD show];
+    _navigationBar.topItem.title = [NSString stringWithFormat:@"%@ %@",title,version];
     
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
-    __weak FZZInfoViewController *weakSelf = self;
-    
-    NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/lookup?id=%@&entity=software",self.developerID];
-    NSURL* url = [NSURL URLWithString:urlString];
-    NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession* session = [NSURLSession sessionWithConfiguration:config];
-    
-    NSURLSessionDataTask* task =
-    [session dataTaskWithURL:url
-           completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-               
-               if(!error){
-                   [weakSelf setSupportDictionary];
-                   [weakSelf setInfomationDictionary];
-                   [weakSelf setAppDictionaryWithResponse:data];
-                   [weakSelf setAcknowledgementDictionary];
-               }else{
-                   [weakSelf setSupportDictionary];
-                   [weakSelf setInfomationDictionary];
-                   [weakSelf setAcknowledgementDictionary];
-               }
-
-               dispatch_async(dispatch_get_main_queue(), ^{
-                   [weakSelf.tableView reloadData];
-                   [SVProgressHUD dismiss];
-               });
-           }];
-    
-    [task resume];
-    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -148,87 +125,67 @@ UINavigationControllerDelegate>
 
 # pragma mark ExtractMethod
 - (void)setSupportDictionary {
+    NSInteger section = kSupportSection;
+    
     NSUInteger index = 0;
-    _data[kSupport][kName] = NSLocalizedStringFromTable(@"App Support",kLocalizeFile,nil);
-    _data[kSupport][kRows] = [NSMutableArray array];
-    [_data[kSupport][kRows] addObject:[NSMutableDictionary dictionary]];
-    [_data[kSupport][kRows] addObject:[NSMutableDictionary dictionary]];
-    [_data[kSupport][kRows] addObject:[NSMutableDictionary dictionary]];
+    _data[section][kName] = NSLocalizedStringFromTable(@"User Feedback",kLocalizeFile,nil);
+    _data[section][kRows] = [NSMutableArray array];
+    [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
+    [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
+    [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
     
-    _data[kSupport][kRows][index][kName] = NSLocalizedStringFromTable(@"Suport Site",kLocalizeFile,nil);
-    _data[kSupport][kRows][index][kAction] = @YES;
+    _data[section][kRows][index][kName] = [self localizedString:@"Rate/Review in AppStore"];
+    _data[section][kRows][index][kUrl] = _reviewPageURL;
+    _data[section][kRows][index][kFile] = @"GoodQuality";
     index++;
     
-    _data[kSupport][kRows][index][kName] = NSLocalizedStringFromTable(@"Rate This App",kLocalizeFile,nil);
-    _data[kSupport][kRows][index][kAction] = @YES;
+    _data[section][kRows][index][kName] = NSLocalizedStringFromTable(@"Report a bug",kLocalizeFile,nil);
+    _data[section][kRows][index][kUrl] = _bugReportURL;
+    _data[section][kRows][index][kFile] = @"Ladybird";
     index++;
     
-    _data[kSupport][kRows][index][kName] = NSLocalizedStringFromTable(@"Bug Report",kLocalizeFile,nil);
-    _data[kSupport][kRows][index][kAction] = @YES;
-
+    _data[section][kRows][index][kName] = NSLocalizedStringFromTable(@"Tell a friend",kLocalizeFile,nil);
+    _data[section][kRows][index][kFile] = @"Talk";
+    _data[section][kRows][index][kUrl] = @"friend";
 }
 
-- (void)setInfomationDictionary {
+- (void)setDeveloperDictionary {
+    NSInteger section = kDeveloperSection;
     
-    _data[kInfo][kName] = NSLocalizedStringFromTable(@"App Infomation",kLocalizeFile,nil);
-    _data[kInfo][kRows] = [NSMutableArray array];
-    [_data[kInfo][kRows] addObject:[NSMutableDictionary dictionary]];
-    [_data[kInfo][kRows] addObject:[NSMutableDictionary dictionary]];
-    [_data[kInfo][kRows] addObject:[NSMutableDictionary dictionary]];
+    _data[section][kName] = NSLocalizedStringFromTable(@"Developer",kLocalizeFile,nil);
+    _data[section][kRows] = [NSMutableArray array];
+    [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
+    [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
+    [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
     
     NSUInteger index = 0;
-    _data[kInfo][kRows][index][kName] = NSLocalizedStringFromTable(@"AppName",kLocalizeFile,nil);
-    _data[kInfo][kRows][index][kAction] = @NO;
-    _data[kInfo][kRows][index][kFile] = @"topicon";
-    _data[kInfo][kRows][index][kValue] = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"];
+    _data[section][kRows][index][kName] = NSLocalizedStringFromTable(@"Web Site",kLocalizeFile,nil);
+    _data[section][kRows][index][kUrl] = _supportSiteURL;
+    _data[section][kRows][index][kFile] = @"Geography";
     
     index++;
-    _data[kInfo][kRows][index][kName] = NSLocalizedStringFromTable(@"Version",kLocalizeFile,nil);
-    _data[kInfo][kRows][index][kAction] = @NO;
-    _data[kInfo][kRows][index][kValue] = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
+    _data[section][kRows][index][kName] = NSLocalizedStringFromTable(@"Privacy Policy",kLocalizeFile,nil);
+    _data[section][kRows][index][kUrl] = _privacyPolicyURL;
+    _data[section][kRows][index][kFile] = @"Lock";
     
     index++;
-    _data[kInfo][kRows][index][kName] = NSLocalizedStringFromTable(@"AppStore",kLocalizeFile,nil);
-    _data[kInfo][kRows][index][kAction] = @YES;
+    _data[section][kRows][index][kName] = NSLocalizedStringFromTable(@"Other Apps",kLocalizeFile,nil);
+    _data[section][kRows][index][kUrl] = _otherAppsURL;
+    _data[section][kRows][index][kFile] = @"Gift";
 }
 
-- (void)setAppDictionaryWithResponse:(id)responseObject {
-    NSUInteger index = 0;
-    
-     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
-    
-    _data[kApp][kName] = NSLocalizedStringFromTable(@"by This Developer",kLocalizeFile,nil);
-    _data[kApp][kRows] = [NSMutableArray array];
-    
-    for (NSDictionary *app in jsonDict[kAPIResults]) {
-        if([app.allKeys containsObject:kAPITrackName]){
-            @autoreleasepool {
-                NSString *appName = [app[kAPITrackName] componentsSeparatedByString:@"-"][0];
-                if([self.appIDString integerValue] != [app[kAPITrackId] integerValue]){
-                    [_data[kApp][kRows] addObject:[NSMutableDictionary dictionary]];
-                    _data[kApp][kRows][index][kName] = appName;
-                    _data[kApp][kRows][index][kUrl] = app[kAPIArtworkUrl60];
-                    _data[kApp][kRows][index][kAction] = @YES;
-                    _data[kApp][kRows][index][kAppId] = app[kAPITrackId];
-                    index++;
-                }
-            }
-        }
-    }
-}
 
-- (void)setAcknowledgementDictionary {
-    _data[kAcknowledgement][kName] = NSLocalizedStringFromTable(@"Other",kLocalizeFile,nil);
-    _data[kAcknowledgement][kRows] = [NSMutableArray array];
-    [_data[kAcknowledgement][kRows] addObject:[NSMutableDictionary dictionary]];
-    [_data[kAcknowledgement][kRows] addObject:[NSMutableDictionary dictionary]];
+- (void)setCreditDictionary {
+    NSInteger section = kCreditSection;
+    
+    _data[section][kName] = NSLocalizedStringFromTable(@"Credit",kLocalizeFile,nil);
+    _data[section][kRows] = [NSMutableArray array];
+    [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
     
     NSUInteger index = 0;
-    _data[kAcknowledgement][kRows][index][kName] = NSLocalizedStringFromTable(@"icons8",kLocalizeFile,nil);
-    _data[kAcknowledgement][kRows][index][kAction] = @YES;
-    index++;
-    _data[kAcknowledgement][kRows][index][kName] = NSLocalizedStringFromTable(@"Privacy Policy",kLocalizeFile,nil);
-    _data[kAcknowledgement][kRows][index][kAction] = @YES;
+    _data[section][kRows][index][kName] = NSLocalizedStringFromTable(@"icons8",kLocalizeFile,nil);
+    _data[section][kRows][index][kUrl] = _icons8URL;
+    _data[section][kRows][index][kFile] = @"Icons8Logo";
 }
 
 
@@ -249,47 +206,17 @@ UINavigationControllerDelegate>
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [_tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if(indexPath.section==kInfo){
-        if(indexPath.row==0){
-            return;
-        }
-        if(indexPath.row==1){
-            return;
-        }
-        if(indexPath.row==2){
-            [self openAppStoreWithAppId:self.appIDString];
-            return;
-        }
+    NSString *url = _data[indexPath.section][kRows][indexPath.row][kUrl];
+    
+    if([url isEqualToString:@"friend"]){
+        [self useActivityViewController];
+        return;
     }
     
-    if(indexPath.section==kSupport){
-        if(indexPath.row==0){
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_supportSiteURL]];
-        }
-        
-        if(indexPath.row==1){
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_reviewPageURL]];
-        }
-        
-        if(indexPath.row==2){
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_bugReportURL]];
-            return;
-        }
+    if (url){
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
     }
     
-    if(indexPath.section==kApp){
-        [self openAppStoreWithAppId:_data[indexPath.section][kRows][indexPath.row][kAppId]];
-    }
-    
-    if(indexPath.section == kAcknowledgement){
-        if(indexPath.row==0){
-            [self showJumpToIcons8Dialog];
-        }
-        if(indexPath.row==1){
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_privacyPolicyURL]];
-            return;
-        }
-    }
 }
 
 # pragma mark UITableViewDataSource
@@ -311,32 +238,18 @@ UINavigationControllerDelegate>
     cell.leftLabel.text = _data[indexPath.section][kRows][indexPath.row][kName];
     cell.rightLabel.text = _data[indexPath.section][kRows][indexPath.row][kValue];
     
-    if(_data[indexPath.section][kRows][indexPath.row][kUrl]){
-        NSURL *url = [NSURL URLWithString:_data[indexPath.section][kRows][indexPath.row][kUrl]];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        UIImage *placeholderImage = nil;
-        
-        __weak FZZInfoCell *weakCell = cell;
-        __weak UIImageView *weakImageView = cell.iconImageView;
-        [cell.iconImageView setImageWithURLRequest:request
-                                  placeholderImage:placeholderImage
-                                           success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-                                               weakImageView.image = image;
-                                               [weakCell setNeedsLayout];
-                                           } failure:nil];
-    }else if(_data[indexPath.section][kRows][indexPath.row][kFile]){
+    if(_data[indexPath.section][kRows][indexPath.row][kFile]){
         UIImage *image = [self imageNamedWithoutCache:_data[indexPath.section][kRows][indexPath.row][kFile]];
-        
-        if(indexPath.section==kSupport){
-            image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-            cell.iconImageView.tintColor = [UIColor grayColor];
-        }
+        image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        cell.iconImageView.tintColor = [UIColor darkGrayColor];
         cell.iconImageView.image = image;
     }else{
         cell.iconImageView.image = nil;
     }
     
-    if([_data[indexPath.section][kRows][indexPath.row][kAction] boolValue]){
+    NSString *url = _data[indexPath.section][kRows][indexPath.row][kUrl];
+    
+    if(url){
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }else{
@@ -353,54 +266,52 @@ UINavigationControllerDelegate>
     return image;
 }
 
-- (void)openAppStoreWithAppId:(NSString *)appstoreId{
-    NSDictionary *params = @{ SKStoreProductParameterITunesItemIdentifier : appstoreId };
-    SKStoreProductViewController *store = [[SKStoreProductViewController alloc] init];
-    store.delegate = self;
+- (void)useActivityViewController{
+    NSString *shareText = [NSString stringWithFormat:@"%@\n%@",_appName,_appstoreURL];
+    NSArray *activityItems = @[shareText];
     
-    [store loadProductWithParameters:params completionBlock:^(BOOL result, NSError *error) {
-        if (!result) {
-            double delayInSeconds = 1.0;
-            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                [self.presentedViewController dismissViewControllerAnimated:YES completion:^{
-                    [SVProgressHUD showErrorWithStatus:NSLocalizedStringFromTable(@"Network Error",kLocalizeFile,nil)];
-                }];
-                
-            });
+    //非表示にするアクティビティ
+    NSArray *excludedActivityTypes = @[UIActivityTypeAssignToContact,UIActivityTypeSaveToCameraRoll];
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc]
+                                                        initWithActivityItems:activityItems
+                                                        applicationActivities:nil];
+    activityViewController.excludedActivityTypes = excludedActivityTypes;
+    
+    activityViewController.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError){
+        if(completed){
+            if(!activityError){
+                [SVProgressHUD showSuccessWithStatus:nil];
+            }else{
+                [SVProgressHUD showErrorWithStatus:activityError.description];
+            }
+        }else{
+            //何もしない
         }
-    }];
+    };
     
-    [self presentViewController:store animated:YES completion:nil];
+    [self presentViewController:activityViewController animated:YES completion:nil];
 }
 
-# pragma mark SKStoreProductViewControllerDlegate
+- (NSString *)localizedString:(NSString *)string{
+    return NSLocalizedStringFromTableInBundle(string,kLocalizeFile,[self bundle], nil);
+}
 
--(void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
+- (NSBundle *)bundle
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    NSBundle *bundle;
+
+    NSURL *bundleURL = [[NSBundle mainBundle] URLForResource:@"FZZInfoKit" withExtension:@"bundle"];
+    
+    if (bundleURL) {
+        bundle = [NSBundle bundleWithURL:bundleURL];
+    } else {
+        bundle = [NSBundle mainBundle];
+    }
+    
+    return bundle;
 }
 
-# pragma mark icons8
 
-- (void)showJumpToIcons8Dialog{
-    __weak typeof(self) weakSelf = self;
-    [RMUniversalAlert showAlertInViewController:self
-                                      withTitle:@"https://icons8.com"
-                                        message:NSLocalizedStringFromTable(@"Open link in Safari?",kLocalizeFile,nil)
-                              cancelButtonTitle:NSLocalizedStringFromTable(@"Cancel",kLocalizeFile,nil)
-                         destructiveButtonTitle:nil
-                              otherButtonTitles:@[@"OK"]
-                                       tapBlock:^(RMUniversalAlert *alert,NSInteger buttonIndex){
-                                           if(buttonIndex == alert.firstOtherButtonIndex){
-                                               [weakSelf openIcons8Page];
-                                           }
-                                       }];
-}
-
-- (void)openIcons8Page{
-    NSString *urlString = _icons8URL;
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
-}
 
 @end

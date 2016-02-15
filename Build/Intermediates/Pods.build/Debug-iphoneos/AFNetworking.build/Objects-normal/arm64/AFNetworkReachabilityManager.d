@@ -1,4 +1,4 @@
 dependencies: \
-  /Users/Administrator/Google\ ドライブ/IOSAPP/01_Programmer/Library/FZZInfoKit/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m \
-  /Users/Administrator/Google\ ドライブ/IOSAPP/01_Programmer/Library/FZZInfoKit/Pods/Target\ Support\ Files/AFNetworking/AFNetworking-prefix.pch \
-  /Users/Administrator/Google\ ドライブ/IOSAPP/01_Programmer/Library/FZZInfoKit/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+  /Users/Administrator/Desktop/app/Library/FZZInfoKit/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m \
+  /Users/Administrator/Desktop/app/Library/FZZInfoKit/Pods/Target\ Support\ Files/AFNetworking/AFNetworking-prefix.pch \
+  /Users/Administrator/Desktop/app/Library/FZZInfoKit/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h

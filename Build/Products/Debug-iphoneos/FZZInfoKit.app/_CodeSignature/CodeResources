@@ -60,15 +60,99 @@
 		</dict>
 		<key>FZZInfoCell.nib</key>
 		<data>
-		vWgZAJKDoZBLd9nq+FJe5tIj/5A=
+		84QRBahyNMcknnU5KqyinPIAFRc=
 		</data>
 		<key>FZZInfoViewController.nib</key>
 		<data>
-		XZuWlHWmUAynJ/8ekjA3DiOJ37k=
+		42J6wnHxfWNnDE+3D4mmWFWV2jE=
+		</data>
+		<key>Geography.png</key>
+		<data>
+		DlX3L5MbR6fd12juEPGj+b3JP1g=
+		</data>
+		<key>Geography@2x.png</key>
+		<data>
+		rKZos0axm9nEjWGFegqMNJATaNs=
+		</data>
+		<key>Geography@3x.png</key>
+		<data>
+		ZJQfnbLeNfRx/jGvM7aB5mC5yZE=
+		</data>
+		<key>Gift.png</key>
+		<data>
+		k9D6nEQSPcr+jc67wlmzUGdNleI=
+		</data>
+		<key>Gift@2x.png</key>
+		<data>
+		m1XqXJLRuwW1eRnYu9GZLj6QKh0=
+		</data>
+		<key>Gift@3x.png</key>
+		<data>
+		oMTqJVP8aEFvafB5o3aT3BFYJSk=
+		</data>
+		<key>GoodQuality.png</key>
+		<data>
+		J0e3/F+S34lUdMBI3cC/5AkDEu8=
+		</data>
+		<key>GoodQuality@2x.png</key>
+		<data>
+		p6smw5QAByed7Lc/0X5+AE8KF10=
+		</data>
+		<key>GoodQuality@3x.png</key>
+		<data>
+		itDl2ms1hd3HGCWxrrKpSvZLFoA=
+		</data>
+		<key>Icons8Logo.png</key>
+		<data>
+		2nhdTXOf6FHvByObeChcWIR3an8=
+		</data>
+		<key>Icons8Logo@2x.png</key>
+		<data>
+		55lrx5LVzWXXK6Sys3n5/2jor8c=
+		</data>
+		<key>Icons8Logo@3x.png</key>
+		<data>
+		wvwjVUI8zehW4RBfG/1CYs3tiyU=
 		</data>
 		<key>Info.plist</key>
 		<data>
 		KWoyysM+5AzNfgwB43HTfXfXF8k=
+		</data>
+		<key>Ladybird.png</key>
+		<data>
+		sFpx+X6VIx5FnykO82aQ6yGzhOY=
+		</data>
+		<key>Ladybird@2x.png</key>
+		<data>
+		ozHCuxsnjZfDbKEVYtSQhSNQfmw=
+		</data>
+		<key>Ladybird@3x.png</key>
+		<data>
+		dSSBA2GQuDeP7vHwvTcNJHR5wgE=
+		</data>
+		<key>Like.png</key>
+		<data>
+		jatKbt8/11n2NkG7dHuEnMtMwXw=
+		</data>
+		<key>Like@2x.png</key>
+		<data>
+		PLhLces8cM/AYBcjvE7kXyg3FOU=
+		</data>
+		<key>Like@3x.png</key>
+		<data>
+		DJEohSjrnuo/m4Ox9n4GpRlvLKo=
+		</data>
+		<key>Lock.png</key>
+		<data>
+		fKAUAbBs6rDnM3NmwT0X089d010=
+		</data>
+		<key>Lock@2x.png</key>
+		<data>
+		J4Ceqi0X8dmTx4oy9InSQLozk0Y=
+		</data>
+		<key>Lock@3x.png</key>
+		<data>
+		lxIDjIqX9TtzcQduYTjfE/10hJQ=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -122,6 +206,54 @@
 		<data>
 		ktkPsgjbXsEzUyaptquUISBzqro=
 		</data>
+		<key>Shield.png</key>
+		<data>
+		z5tgxvBXvqLcxIkvo3EcIOFF2F8=
+		</data>
+		<key>Shield@2x.png</key>
+		<data>
+		gY1O3W56iG/0xf//02t2F94wuRU=
+		</data>
+		<key>Shield@3x.png</key>
+		<data>
+		aDxWwgENrBNkRd5NuPLFbKYsnDY=
+		</data>
+		<key>Talk.png</key>
+		<data>
+		PT7y+NghSMKLAMl5ek1q7NRTg4M=
+		</data>
+		<key>Talk@2x.png</key>
+		<data>
+		OVfpPa9GLzzQbXPZ7y5lMPydbWE=
+		</data>
+		<key>Talk@3x.png</key>
+		<data>
+		0iIXtaLU7Bgc1o0L/z+0/YgxKS8=
+		</data>
+		<key>ThumbUp.png</key>
+		<data>
+		SHkcdyXRUrw+qQVMppHBHwwUNXc=
+		</data>
+		<key>ThumbUp@2x.png</key>
+		<data>
+		Xk51Il2wa+T/WK7oujUCLhLVz28=
+		</data>
+		<key>ThumbUp@3x.png</key>
+		<data>
+		t4kfXDUopfRNmKHpz14KQp9Kht4=
+		</data>
+		<key>ThumbsDown.png</key>
+		<data>
+		JdI7O8hRkaTTzZY+zOZ1KShPDhA=
+		</data>
+		<key>ThumbsDown@2x.png</key>
+		<data>
+		dXik8sx2gKmNrM0nRQxps5J6KUo=
+		</data>
+		<key>ThumbsDown@3x.png</key>
+		<data>
+		uyggsMQ76YaxJ7Uqqn9Do3q9L9w=
+		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
 		IpiVhdA95purG5TzKkB9szG9qlw=
@@ -139,7 +271,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HXmaglfTjvi0Sg10oM4iguls7lE=
+			2sK7tOdI4bByfWiKyLOqbeCipz8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -221,11 +353,95 @@
 		</dict>
 		<key>FZZInfoCell.nib</key>
 		<data>
-		vWgZAJKDoZBLd9nq+FJe5tIj/5A=
+		84QRBahyNMcknnU5KqyinPIAFRc=
 		</data>
 		<key>FZZInfoViewController.nib</key>
 		<data>
-		XZuWlHWmUAynJ/8ekjA3DiOJ37k=
+		42J6wnHxfWNnDE+3D4mmWFWV2jE=
+		</data>
+		<key>Geography.png</key>
+		<data>
+		DlX3L5MbR6fd12juEPGj+b3JP1g=
+		</data>
+		<key>Geography@2x.png</key>
+		<data>
+		rKZos0axm9nEjWGFegqMNJATaNs=
+		</data>
+		<key>Geography@3x.png</key>
+		<data>
+		ZJQfnbLeNfRx/jGvM7aB5mC5yZE=
+		</data>
+		<key>Gift.png</key>
+		<data>
+		k9D6nEQSPcr+jc67wlmzUGdNleI=
+		</data>
+		<key>Gift@2x.png</key>
+		<data>
+		m1XqXJLRuwW1eRnYu9GZLj6QKh0=
+		</data>
+		<key>Gift@3x.png</key>
+		<data>
+		oMTqJVP8aEFvafB5o3aT3BFYJSk=
+		</data>
+		<key>GoodQuality.png</key>
+		<data>
+		J0e3/F+S34lUdMBI3cC/5AkDEu8=
+		</data>
+		<key>GoodQuality@2x.png</key>
+		<data>
+		p6smw5QAByed7Lc/0X5+AE8KF10=
+		</data>
+		<key>GoodQuality@3x.png</key>
+		<data>
+		itDl2ms1hd3HGCWxrrKpSvZLFoA=
+		</data>
+		<key>Icons8Logo.png</key>
+		<data>
+		2nhdTXOf6FHvByObeChcWIR3an8=
+		</data>
+		<key>Icons8Logo@2x.png</key>
+		<data>
+		55lrx5LVzWXXK6Sys3n5/2jor8c=
+		</data>
+		<key>Icons8Logo@3x.png</key>
+		<data>
+		wvwjVUI8zehW4RBfG/1CYs3tiyU=
+		</data>
+		<key>Ladybird.png</key>
+		<data>
+		sFpx+X6VIx5FnykO82aQ6yGzhOY=
+		</data>
+		<key>Ladybird@2x.png</key>
+		<data>
+		ozHCuxsnjZfDbKEVYtSQhSNQfmw=
+		</data>
+		<key>Ladybird@3x.png</key>
+		<data>
+		dSSBA2GQuDeP7vHwvTcNJHR5wgE=
+		</data>
+		<key>Like.png</key>
+		<data>
+		jatKbt8/11n2NkG7dHuEnMtMwXw=
+		</data>
+		<key>Like@2x.png</key>
+		<data>
+		PLhLces8cM/AYBcjvE7kXyg3FOU=
+		</data>
+		<key>Like@3x.png</key>
+		<data>
+		DJEohSjrnuo/m4Ox9n4GpRlvLKo=
+		</data>
+		<key>Lock.png</key>
+		<data>
+		fKAUAbBs6rDnM3NmwT0X089d010=
+		</data>
+		<key>Lock@2x.png</key>
+		<data>
+		J4Ceqi0X8dmTx4oy9InSQLozk0Y=
+		</data>
+		<key>Lock@3x.png</key>
+		<data>
+		lxIDjIqX9TtzcQduYTjfE/10hJQ=
 		</data>
 		<key>SVProgressHUD.bundle/angle-mask.png</key>
 		<data>
@@ -275,6 +491,54 @@
 		<data>
 		ktkPsgjbXsEzUyaptquUISBzqro=
 		</data>
+		<key>Shield.png</key>
+		<data>
+		z5tgxvBXvqLcxIkvo3EcIOFF2F8=
+		</data>
+		<key>Shield@2x.png</key>
+		<data>
+		gY1O3W56iG/0xf//02t2F94wuRU=
+		</data>
+		<key>Shield@3x.png</key>
+		<data>
+		aDxWwgENrBNkRd5NuPLFbKYsnDY=
+		</data>
+		<key>Talk.png</key>
+		<data>
+		PT7y+NghSMKLAMl5ek1q7NRTg4M=
+		</data>
+		<key>Talk@2x.png</key>
+		<data>
+		OVfpPa9GLzzQbXPZ7y5lMPydbWE=
+		</data>
+		<key>Talk@3x.png</key>
+		<data>
+		0iIXtaLU7Bgc1o0L/z+0/YgxKS8=
+		</data>
+		<key>ThumbUp.png</key>
+		<data>
+		SHkcdyXRUrw+qQVMppHBHwwUNXc=
+		</data>
+		<key>ThumbUp@2x.png</key>
+		<data>
+		Xk51Il2wa+T/WK7oujUCLhLVz28=
+		</data>
+		<key>ThumbUp@3x.png</key>
+		<data>
+		t4kfXDUopfRNmKHpz14KQp9Kht4=
+		</data>
+		<key>ThumbsDown.png</key>
+		<data>
+		JdI7O8hRkaTTzZY+zOZ1KShPDhA=
+		</data>
+		<key>ThumbsDown@2x.png</key>
+		<data>
+		dXik8sx2gKmNrM0nRQxps5J6KUo=
+		</data>
+		<key>ThumbsDown@3x.png</key>
+		<data>
+		uyggsMQ76YaxJ7Uqqn9Do3q9L9w=
+		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
 		IpiVhdA95purG5TzKkB9szG9qlw=
@@ -292,7 +556,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HXmaglfTjvi0Sg10oM4iguls7lE=
+			2sK7tOdI4bByfWiKyLOqbeCipz8=
 			</data>
 			<key>optional</key>
 			<true/>

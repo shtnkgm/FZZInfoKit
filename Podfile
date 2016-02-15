@@ -3,5 +3,4 @@ inhibit_all_warnings!
 
 pod 'SVProgressHUD', :head
 pod 'RMUniversalAlert'
-pod 'AFNetworking'
 

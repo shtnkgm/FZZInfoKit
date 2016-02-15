@@ -241,7 +241,7 @@ UINavigationControllerDelegate>
     if(_data[indexPath.section][kRows][indexPath.row][kFile]){
         UIImage *image = [self imageNamedWithoutCache:_data[indexPath.section][kRows][indexPath.row][kFile]];
         image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-        cell.iconImageView.tintColor = [UIColor darkGrayColor];
+        cell.iconImageView.tintColor = [UIColor darkTextColor];
         cell.iconImageView.image = image;
     }else{
         cell.iconImageView.image = nil;

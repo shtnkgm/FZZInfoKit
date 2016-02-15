@@ -89,7 +89,7 @@ UINavigationControllerDelegate>
     [self setCreditDictionary];
     
     //閉じるボタンの作成
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTable(@"Close",kLocalizeFile,nil)
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:[self localizedString:@"Close"]
                                                                    style:UIBarButtonItemStyleDone
                                                                                 target:self
                                                                                 action:@selector(doneButtonDidPushed:)];
@@ -128,7 +128,7 @@ UINavigationControllerDelegate>
     NSInteger section = kSupportSection;
     
     NSUInteger index = 0;
-    _data[section][kName] = NSLocalizedStringFromTable(@"User Feedback",kLocalizeFile,nil);
+    _data[section][kName] = [self localizedString:@"User Feedback"];
     _data[section][kRows] = [NSMutableArray array];
     [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
     [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
@@ -139,12 +139,12 @@ UINavigationControllerDelegate>
     _data[section][kRows][index][kFile] = @"GoodQuality";
     index++;
     
-    _data[section][kRows][index][kName] = NSLocalizedStringFromTable(@"Report a bug",kLocalizeFile,nil);
+    _data[section][kRows][index][kName] = [self localizedString:@"Report a bug"];
     _data[section][kRows][index][kUrl] = _bugReportURL;
     _data[section][kRows][index][kFile] = @"Ladybird";
     index++;
     
-    _data[section][kRows][index][kName] = NSLocalizedStringFromTable(@"Tell a friend",kLocalizeFile,nil);
+    _data[section][kRows][index][kName] = [self localizedString:@"Tell a friend"];
     _data[section][kRows][index][kFile] = @"Talk";
     _data[section][kRows][index][kUrl] = @"friend";
 }
@@ -152,24 +152,24 @@ UINavigationControllerDelegate>
 - (void)setDeveloperDictionary {
     NSInteger section = kDeveloperSection;
     
-    _data[section][kName] = NSLocalizedStringFromTable(@"Developer",kLocalizeFile,nil);
+    _data[section][kName] = [self localizedString:@"Developer"];
     _data[section][kRows] = [NSMutableArray array];
     [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
     [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
     [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
     
     NSUInteger index = 0;
-    _data[section][kRows][index][kName] = NSLocalizedStringFromTable(@"Web Site",kLocalizeFile,nil);
+    _data[section][kRows][index][kName] = [self localizedString:@"Web Site"];
     _data[section][kRows][index][kUrl] = _supportSiteURL;
     _data[section][kRows][index][kFile] = @"Geography";
     
     index++;
-    _data[section][kRows][index][kName] = NSLocalizedStringFromTable(@"Privacy Policy",kLocalizeFile,nil);
+    _data[section][kRows][index][kName] = [self localizedString:@"Privacy Policy"];
     _data[section][kRows][index][kUrl] = _privacyPolicyURL;
     _data[section][kRows][index][kFile] = @"Lock";
     
     index++;
-    _data[section][kRows][index][kName] = NSLocalizedStringFromTable(@"Other Apps",kLocalizeFile,nil);
+    _data[section][kRows][index][kName] = [self localizedString:@"Other Apps"];
     _data[section][kRows][index][kUrl] = _otherAppsURL;
     _data[section][kRows][index][kFile] = @"Gift";
 }
@@ -178,12 +178,12 @@ UINavigationControllerDelegate>
 - (void)setCreditDictionary {
     NSInteger section = kCreditSection;
     
-    _data[section][kName] = NSLocalizedStringFromTable(@"Credit",kLocalizeFile,nil);
+    _data[section][kName] = [self localizedString:@"Credit"];
     _data[section][kRows] = [NSMutableArray array];
     [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
     
     NSUInteger index = 0;
-    _data[section][kRows][index][kName] = NSLocalizedStringFromTable(@"icons8",kLocalizeFile,nil);
+    _data[section][kRows][index][kName] = [self localizedString:@"icons8"];
     _data[section][kRows][index][kUrl] = _icons8URL;
     _data[section][kRows][index][kFile] = @"Icons8Logo";
 }

@@ -41,6 +41,19 @@
 		C32623021C720D69006B089A /* Talk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32622FF1C720D69006B089A /* Talk@2x.png */; };
 		C32623031C720D69006B089A /* Talk@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32623001C720D69006B089A /* Talk@3x.png */; };
 		C32623041C720D69006B089A /* Talk.png in Resources */ = {isa = PBXBuildFile; fileRef = C32623011C720D69006B089A /* Talk.png */; };
+		C326232D1C74F2D8006B089A /* Error@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C326232A1C74F2D8006B089A /* Error@3x.png */; };
+		C326232E1C74F2D8006B089A /* Error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C326232B1C74F2D8006B089A /* Error@2x.png */; };
+		C326232F1C74F2D8006B089A /* Error.png in Resources */ = {isa = PBXBuildFile; fileRef = C326232C1C74F2D8006B089A /* Error.png */; };
+		C32623331C74F3AA006B089A /* ShoppingCart.png in Resources */ = {isa = PBXBuildFile; fileRef = C32623301C74F3AA006B089A /* ShoppingCart.png */; };
+		C32623341C74F3AA006B089A /* ShoppingCart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32623311C74F3AA006B089A /* ShoppingCart@2x.png */; };
+		C32623351C74F3AA006B089A /* ShoppingCart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32623321C74F3AA006B089A /* ShoppingCart@3x.png */; };
+		C32623401C74FABC006B089A /* FZZInfoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C326233F1C74FABC006B089A /* FZZInfoNavigationController.m */; };
+		C32623491C74FE7C006B089A /* FZZCreditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C32623471C74FE7C006B089A /* FZZCreditViewController.m */; };
+		C326234A1C74FE7C006B089A /* FZZCreditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32623481C74FE7C006B089A /* FZZCreditViewController.xib */; };
+		C326234E1C74FFA3006B089A /* Document@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C326234B1C74FFA3006B089A /* Document@2x.png */; };
+		C326234F1C74FFA3006B089A /* Document@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C326234C1C74FFA3006B089A /* Document@3x.png */; };
+		C32623501C74FFA3006B089A /* Document.png in Resources */ = {isa = PBXBuildFile; fileRef = C326234D1C74FFA3006B089A /* Document.png */; };
+		C32623521C75D60F006B089A /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = C32623511C75D60F006B089A /* Pods-acknowledgements.plist */; };
 		C3A2C61B1C5F4B3C00FE057B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2C61A1C5F4B3C00FE057B /* main.m */; };
 		C3A2C61E1C5F4B3C00FE057B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2C61D1C5F4B3C00FE057B /* AppDelegate.m */; };
 		C3A2C6211C5F4B3C00FE057B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2C6201C5F4B3C00FE057B /* ViewController.m */; };
@@ -91,6 +104,21 @@
 		C32622FF1C720D69006B089A /* Talk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Talk@2x.png"; sourceTree = "<group>"; };
 		C32623001C720D69006B089A /* Talk@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Talk@3x.png"; sourceTree = "<group>"; };
 		C32623011C720D69006B089A /* Talk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Talk.png; sourceTree = "<group>"; };
+		C326232A1C74F2D8006B089A /* Error@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Error@3x.png"; sourceTree = "<group>"; };
+		C326232B1C74F2D8006B089A /* Error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Error@2x.png"; sourceTree = "<group>"; };
+		C326232C1C74F2D8006B089A /* Error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Error.png; sourceTree = "<group>"; };
+		C32623301C74F3AA006B089A /* ShoppingCart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShoppingCart.png; sourceTree = "<group>"; };
+		C32623311C74F3AA006B089A /* ShoppingCart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ShoppingCart@2x.png"; sourceTree = "<group>"; };
+		C32623321C74F3AA006B089A /* ShoppingCart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ShoppingCart@3x.png"; sourceTree = "<group>"; };
+		C326233E1C74FABC006B089A /* FZZInfoNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZZInfoNavigationController.h; sourceTree = "<group>"; };
+		C326233F1C74FABC006B089A /* FZZInfoNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZZInfoNavigationController.m; sourceTree = "<group>"; };
+		C32623461C74FE7C006B089A /* FZZCreditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZZCreditViewController.h; sourceTree = "<group>"; };
+		C32623471C74FE7C006B089A /* FZZCreditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZZCreditViewController.m; sourceTree = "<group>"; tabWidth = 3; };
+		C32623481C74FE7C006B089A /* FZZCreditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FZZCreditViewController.xib; sourceTree = "<group>"; };
+		C326234B1C74FFA3006B089A /* Document@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Document@2x.png"; sourceTree = "<group>"; };
+		C326234C1C74FFA3006B089A /* Document@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Document@3x.png"; sourceTree = "<group>"; };
+		C326234D1C74FFA3006B089A /* Document.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Document.png; sourceTree = "<group>"; };
+		C32623511C75D60F006B089A /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		C3A2C6161C5F4B3C00FE057B /* FZZInfoKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FZZInfoKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A2C61A1C5F4B3C00FE057B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3A2C61C1C5F4B3C00FE057B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,6 +171,12 @@
 		C32622AE1C70B970006B089A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C326234B1C74FFA3006B089A /* Document@2x.png */,
+				C326234C1C74FFA3006B089A /* Document@3x.png */,
+				C326234D1C74FFA3006B089A /* Document.png */,
+				C326232A1C74F2D8006B089A /* Error@3x.png */,
+				C326232B1C74F2D8006B089A /* Error@2x.png */,
+				C326232C1C74F2D8006B089A /* Error.png */,
 				C32622E71C71E79D006B089A /* Ladybird@2x.png */,
 				C32622E81C71E79D006B089A /* Ladybird@3x.png */,
 				C32622E91C71E79D006B089A /* Ladybird.png */,
@@ -158,6 +192,9 @@
 				C32622C31C70EE09006B089A /* ThumbsDown.png */,
 				C32622C41C70EE09006B089A /* ThumbsDown@2x.png */,
 				C32622C51C70EE09006B089A /* ThumbsDown@3x.png */,
+				C32623301C74F3AA006B089A /* ShoppingCart.png */,
+				C32623311C74F3AA006B089A /* ShoppingCart@2x.png */,
+				C32623321C74F3AA006B089A /* ShoppingCart@3x.png */,
 				C32622DB1C70F2E8006B089A /* Shield.png */,
 				C32622DC1C70F2E8006B089A /* Shield@2x.png */,
 				C32622DD1C70F2E8006B089A /* Shield@3x.png */,
@@ -202,14 +239,20 @@
 			isa = PBXGroup;
 			children = (
 				C32622AE1C70B970006B089A /* images */,
-				C3A2C68A1C6A1EF200FE057B /* FZZInfoCell.xib */,
-				C3A2C68C1C6A1EF700FE057B /* FZZInfoViewController.xib */,
 				C3A2C68E1C6B644100FE057B /* FZZInfoViewControllerLocalizable.strings */,
 				C3A2C6301C5F4B5600FE057B /* FZZInfoCell.h */,
 				C3A2C6311C5F4B5600FE057B /* FZZInfoCell.m */,
+				C3A2C68A1C6A1EF200FE057B /* FZZInfoCell.xib */,
+				C326233E1C74FABC006B089A /* FZZInfoNavigationController.h */,
+				C326233F1C74FABC006B089A /* FZZInfoNavigationController.m */,
 				C3A2C6331C5F4B5600FE057B /* FZZInfoViewController.h */,
 				C3A2C6341C5F4B5600FE057B /* FZZInfoViewController.m */,
+				C3A2C68C1C6A1EF700FE057B /* FZZInfoViewController.xib */,
 				C3A2C61C1C5F4B3C00FE057B /* AppDelegate.h */,
+				C32623461C74FE7C006B089A /* FZZCreditViewController.h */,
+				C32623471C74FE7C006B089A /* FZZCreditViewController.m */,
+				C32623481C74FE7C006B089A /* FZZCreditViewController.xib */,
+				C32623511C75D60F006B089A /* Pods-acknowledgements.plist */,
 				C3A2C61D1C5F4B3C00FE057B /* AppDelegate.m */,
 				C3A2C61F1C5F4B3C00FE057B /* ViewController.h */,
 				C3A2C6201C5F4B3C00FE057B /* ViewController.m */,
@@ -292,15 +335,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32622FE1C71F0CE006B089A /* Lock.png in Resources */,
+				C32623351C74F3AA006B089A /* ShoppingCart@3x.png in Resources */,
 				C32622DE1C70F2E8006B089A /* Shield.png in Resources */,
+				C32623521C75D60F006B089A /* Pods-acknowledgements.plist in Resources */,
 				C32623021C720D69006B089A /* Talk@2x.png in Resources */,
 				C32622F71C71E8E6006B089A /* GoodQuality@2x.png in Resources */,
 				C32622DA1C70F1B7006B089A /* Gift@3x.png in Resources */,
+				C326234A1C74FE7C006B089A /* FZZCreditViewController.xib in Resources */,
 				C32622EB1C71E79D006B089A /* Ladybird@3x.png in Resources */,
 				C32622C11C70EDA3006B089A /* ThumbUp@2x.png in Resources */,
 				C32622E01C70F2E8006B089A /* Shield@3x.png in Resources */,
+				C32623501C74FFA3006B089A /* Document.png in Resources */,
 				C3A2C6291C5F4B3C00FE057B /* LaunchScreen.storyboard in Resources */,
 				C32623041C720D69006B089A /* Talk.png in Resources */,
+				C326234F1C74FFA3006B089A /* Document@3x.png in Resources */,
+				C326232E1C74F2D8006B089A /* Error@2x.png in Resources */,
 				C32622FC1C71F0CE006B089A /* Lock@2x.png in Resources */,
 				C32622C81C70EE09006B089A /* ThumbsDown@3x.png in Resources */,
 				C32622E51C70F792006B089A /* Geography@3x.png in Resources */,
@@ -308,18 +357,22 @@
 				C32622F01C71E866006B089A /* Like.png in Resources */,
 				C32622CE1C70EFDE006B089A /* Icons8Logo.png in Resources */,
 				C3A2C6261C5F4B3C00FE057B /* Assets.xcassets in Resources */,
+				C326232F1C74F2D8006B089A /* Error.png in Resources */,
 				C3A2C68B1C6A1EF200FE057B /* FZZInfoCell.xib in Resources */,
 				C32622C21C70EDA3006B089A /* ThumbUp@3x.png in Resources */,
 				C32622C71C70EE09006B089A /* ThumbsDown@2x.png in Resources */,
+				C326232D1C74F2D8006B089A /* Error@3x.png in Resources */,
 				C32622E41C70F792006B089A /* Geography@2x.png in Resources */,
 				C32622D81C70F1B7006B089A /* Gift.png in Resources */,
 				C3A2C6901C6B644100FE057B /* FZZInfoViewControllerLocalizable.strings in Resources */,
+				C32623341C74F3AA006B089A /* ShoppingCart@2x.png in Resources */,
 				C32622CD1C70EFDE006B089A /* Icons8Logo@3x.png in Resources */,
 				C32622F21C71E866006B089A /* Like@3x.png in Resources */,
 				C32622DF1C70F2E8006B089A /* Shield@2x.png in Resources */,
 				C32622EC1C71E79D006B089A /* Ladybird.png in Resources */,
 				C32622F81C71E8E6006B089A /* GoodQuality.png in Resources */,
 				C32622C61C70EE09006B089A /* ThumbsDown.png in Resources */,
+				C326234E1C74FFA3006B089A /* Document@2x.png in Resources */,
 				C32622F61C71E8E6006B089A /* GoodQuality@3x.png in Resources */,
 				C32622D91C70F1B7006B089A /* Gift@2x.png in Resources */,
 				C3A2C6241C5F4B3C00FE057B /* Main.storyboard in Resources */,
@@ -327,6 +380,7 @@
 				C3A2C68D1C6A1EF700FE057B /* FZZInfoViewController.xib in Resources */,
 				C32623031C720D69006B089A /* Talk@3x.png in Resources */,
 				C32622E61C70F792006B089A /* Geography.png in Resources */,
+				C32623331C74F3AA006B089A /* ShoppingCart.png in Resources */,
 				C32622F11C71E866006B089A /* Like@2x.png in Resources */,
 				C32622EA1C71E79D006B089A /* Ladybird@2x.png in Resources */,
 				C32622C01C70EDA3006B089A /* ThumbUp.png in Resources */,
@@ -392,7 +446,9 @@
 				C3A2C6211C5F4B3C00FE057B /* ViewController.m in Sources */,
 				C3A2C61E1C5F4B3C00FE057B /* AppDelegate.m in Sources */,
 				C3A2C6371C5F4B5600FE057B /* FZZInfoCell.m in Sources */,
+				C32623401C74FABC006B089A /* FZZInfoNavigationController.m in Sources */,
 				C3A2C61B1C5F4B3C00FE057B /* main.m in Sources */,
+				C32623491C74FE7C006B089A /* FZZCreditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

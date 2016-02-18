@@ -21,6 +21,6 @@
 
 @protocol FZZInfoViewControllerDelegate
 
-- (void)infoViewWillClose;
+- (void)viewWillClose;
 
 @end

@@ -4,89 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>RMUniversalAlert.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>UIActionSheet+Blocks.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>UIAlertController+Blocks.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
-		</dict>
-		<key>UIAlertView+Blocks.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>180AE381C21D032C43EC7BCBB0639C43</key>
+		<key>200E616D6474F5D296B069EFF03F629B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2F0D9DAA4F2656DB9969B1F446C9BC9D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4A8D32F2404BA567697B564D511AE4C8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5B7BCBC62E2BCE88BCFD2508DB05264A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>73D0F9B6C9D19B9023C132309E952370</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>928353533005A4198EBDA5B700D37B64</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B29DA443ECEE0B5E1FB037E957746D7F</key>
+		<key>F41DDB6E5D102458002E5B4A9ED32DB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

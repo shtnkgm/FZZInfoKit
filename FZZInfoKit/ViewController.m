@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "FZZInfoViewController.h"
+#import "FZZInfoNavigationController.h"
 
 @interface ViewController ()
+<FZZInfoNavigationControllerDelegate>
 
 @end
 
@@ -23,13 +24,18 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{    
-    FZZInfoViewController *vc = [FZZInfoViewController new];
-    vc.appIDString = @"480099135";
+    FZZInfoNavigationController *vc = [FZZInfoNavigationController new];
+    //vc.appIDString = @"480099135";
     
-    vc.delegate = self;
+    vc.closeDelegate = self;
     [self presentViewController:vc
                        animated:YES
                      completion:nil];
+}
+
+- (void)viewWillClose{
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,21 +8,19 @@
 
 #import "FZZInfoViewController.h"
 #import "FZZInfoCell.h"
+#import "FZZCreditViewController.h"
 
 //iOS SDK
 #import <StoreKit/StoreKit.h>
 
 //オープンソースライブラリ
 #import "SVProgressHUD.h"
-#import "RMUniversalAlert.h"
 
 static NSString *const kName = @"name";
 static NSString *const kRows = @"rows";
 static NSString *const kValue = @"value";
 static NSString *const kUrl = @"url";
 static NSString *const kFile = @"file";
-static NSString *const kAppId = @"appid";
-
  
 static const NSInteger kSupportSection   = 0;
 static const NSInteger kDeveloperSection = 1;
@@ -37,17 +35,21 @@ UITableViewDelegate,
 UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
 @property (nonatomic, copy) NSString *supportSiteURL;
 @property (nonatomic, copy) NSString *developerID;
 @property (nonatomic, copy) NSString *icons8URL;
 @property (nonatomic, copy) NSString *bugReportURL;
+@property (nonatomic, copy) NSString *bugReportURLWithOption;
 @property (nonatomic, copy) NSString *privacyPolicyURL;
 @property (nonatomic, copy) NSString *appstoreURL;
 @property (nonatomic, copy) NSString *reviewPageURL;
 @property (nonatomic, copy) NSString *otherAppsURL;
 @property (nonatomic, copy) NSString *appName;
+@property (nonatomic, copy) NSString *appVersion;
+
+@property (nonatomic, copy) NSString *appNameFormID;
+@property (nonatomic, copy) NSString *iOSVersionFormID;
 
 @end
 
@@ -65,14 +67,21 @@ UINavigationControllerDelegate>
 
     //初期化
     self.appName = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"];
+    self.appVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
     self.developerID = @"457011383";
     self.supportSiteURL = @"http://shtnkgm.github.io";
     self.icons8URL = @"https://icons8.com";
-    self.bugReportURL = @"http://goo.gl/forms/glkS7fBe1V";
+    self.bugReportURL = @"https://docs.google.com/forms/d/1jAD7A1ch6D1SXbxf3hPzF15hicTbxKadaHf03axRbQk/viewform";
     self.privacyPolicyURL = @"http://shtnkgm.github.io/privacy.html";
     self.appstoreURL = [NSString stringWithFormat:@"https://itunes.apple.com/app/id%@",_appIDString];
     self.reviewPageURL = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",_appIDString];
     self.otherAppsURL = @"itms-apps://itunes.com/apps/shotanakagami";
+    
+    self.appNameFormID = @"entry_724500489";
+    self.iOSVersionFormID = @"entry_299887800";
+    
+    
+    self.bugReportURLWithOption = [NSString stringWithFormat:@"%@?%@=%@%@&%@=%@",_bugReportURL,_appNameFormID,_appName,_appVersion,_iOSVersionFormID,[[UIDevice currentDevice] systemVersion]];
     
     //TableViewセルの初期化
     UINib *nib = [UINib nibWithNibName:@"FZZInfoCell" bundle:nil];
@@ -94,14 +103,7 @@ UINavigationControllerDelegate>
                                                                                 target:self
                                                                                 action:@selector(doneButtonDidPushed:)];
     
-    _navigationBar.topItem.leftBarButtonItem = doneButton;
-    
-    //タイトルの初期化
-    //_navigationBar.topItem.title = nil;
-    NSString *title = _appName;
-    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
-    
-    _navigationBar.topItem.title = [NSString stringWithFormat:@"%@ %@",title,version];
+    self.navigationController.navigationBar.topItem.leftBarButtonItem = doneButton;
     
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -140,8 +142,8 @@ UINavigationControllerDelegate>
     index++;
     
     _data[section][kRows][index][kName] = [self localizedString:@"Report a bug"];
-    _data[section][kRows][index][kUrl] = _bugReportURL;
-    _data[section][kRows][index][kFile] = @"Ladybird";
+    _data[section][kRows][index][kUrl] = _bugReportURLWithOption;
+    _data[section][kRows][index][kFile] = @"Error";
     index++;
     
     _data[section][kRows][index][kName] = [self localizedString:@"Tell a friend"];
@@ -171,7 +173,7 @@ UINavigationControllerDelegate>
     index++;
     _data[section][kRows][index][kName] = [self localizedString:@"Other Apps"];
     _data[section][kRows][index][kUrl] = _otherAppsURL;
-    _data[section][kRows][index][kFile] = @"Gift";
+    _data[section][kRows][index][kFile] = @"ShoppingCart";
 }
 
 
@@ -181,17 +183,24 @@ UINavigationControllerDelegate>
     _data[section][kName] = [self localizedString:@"Credit"];
     _data[section][kRows] = [NSMutableArray array];
     [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
+    [_data[section][kRows] addObject:[NSMutableDictionary dictionary]];
     
     NSUInteger index = 0;
     _data[section][kRows][index][kName] = [self localizedString:@"icons8"];
     _data[section][kRows][index][kUrl] = _icons8URL;
     _data[section][kRows][index][kFile] = @"Icons8Logo";
+    
+    index ++;
+    _data[section][kRows][index][kName] = [self localizedString:@"Lisence"];
+    _data[section][kRows][index][kUrl] = @"credit";
+    _data[section][kRows][index][kFile] = @"Document";
+    
 }
 
 
 # pragma mark UIAction
 - (IBAction)doneButtonDidPushed:(id)sender{
-    [_delegate infoViewWillClose];
+    [_delegate viewWillClose];
 }
 
 # pragma mark UITableViewDelegate
@@ -213,10 +222,15 @@ UINavigationControllerDelegate>
         return;
     }
     
-    if (url){
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+    if([url isEqualToString:@"credit"]){
+        FZZCreditViewController *viewController = [FZZCreditViewController new];
+        [self.navigationController pushViewController:viewController animated:YES];
     }
     
+    if (url){
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+        return;
+    }
 }
 
 # pragma mark UITableViewDataSource

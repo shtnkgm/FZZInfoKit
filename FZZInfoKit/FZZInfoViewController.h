@@ -8,19 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol FZZInfoViewControllerDelegate;
-
 @interface FZZInfoViewController : UIViewController
 
-@property (nonatomic, strong) NSMutableArray *data;
-@property (nonatomic, weak) id<FZZInfoViewControllerDelegate>delegate;
-@property (nonatomic, copy) NSString *appIDString;
-
-
-@end
-
-@protocol FZZInfoViewControllerDelegate
-
-- (void)viewWillClose;
+@property (nonatomic, copy) NSString *appID;
+@property (nonatomic, strong) UIColor *keyColor;
+@property (nonatomic, copy) NSString *iconName;
+@property (nonatomic, assign) BOOL letIconRound;
 
 @end

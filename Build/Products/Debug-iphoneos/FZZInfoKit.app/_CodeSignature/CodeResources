@@ -8,7 +8,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			svQQrE8p2yTCur+Hg3llh+SZrWU=
+			UGBP5TDKklF+OPDSUjw3Ef5QNUw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -26,7 +26,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AQrnfMets6ucB17NHzK1wWJTadA=
+			eLp/Lk7gTsJvHFkcS0emUVE7EZI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -35,7 +35,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZamrKPR2H23imWYMIY4zHl5hnlQ=
+			Z1AaNsYzDQBf35FFHwKGMpEkcdE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -53,18 +53,130 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FbvpUqxzLHrjUTAi7Ji3TC4RKFU=
+			zg/XImpgnoF9dGcaOym7+qQv7wI=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Briefcase-78.png</key>
+		<data>
+		lzRVNC1/h6UbpwzQGGuW/EBXBQA=
+		</data>
+		<key>Briefcase.png</key>
+		<data>
+		nEMf81Ssg2OOO2z9VRi7kY7qSJU=
+		</data>
+		<key>Briefcase@2x.png</key>
+		<data>
+		8Onk0vjlawxhdBmNUCw2iKSRf6o=
+		</data>
+		<key>Document.png</key>
+		<data>
+		i9AkWohPYvUscdWGiV/bkE/lN+k=
+		</data>
+		<key>Document@2x.png</key>
+		<data>
+		7LqHfI6V9/H39p7BDCbEBkBU33U=
+		</data>
+		<key>Document@3x.png</key>
+		<data>
+		oZGzDCUVE4qCiRH0QTaTR1/isbQ=
+		</data>
+		<key>Error.png</key>
+		<data>
+		2N2a9Z1CqQYNzDl35BBTVbG8qzE=
+		</data>
+		<key>Error@2x.png</key>
+		<data>
+		sqU90zOLEUZ38g1yAXN9KOaQLyQ=
+		</data>
+		<key>Error@3x.png</key>
+		<data>
+		pTATzgfbvGgy8hUoPhXpwXk4aEc=
+		</data>
 		<key>FZZInfoCell.nib</key>
 		<data>
-		84QRBahyNMcknnU5KqyinPIAFRc=
+		em6xUEl7HBEeSK7VIfltPTHFBVw=
+		</data>
+		<key>FZZInfoCreditViewController.nib</key>
+		<data>
+		4XoAg/u4sBhTpamDqfZGcI7uWe0=
 		</data>
 		<key>FZZInfoViewController.nib</key>
 		<data>
-		42J6wnHxfWNnDE+3D4mmWFWV2jE=
+		u/DVs8bUC/Slaxg44Nwx4tmG6DM=
+		</data>
+		<key>Frameworks/ChameleonFramework.framework/ChameleonFramework</key>
+		<data>
+		yPZH4xrriieWAtJg4dO1daw1UpE=
+		</data>
+		<key>Frameworks/ChameleonFramework.framework/Info.plist</key>
+		<data>
+		NpH0jbY0uRLihTDmflLU0mu/n5o=
+		</data>
+		<key>Frameworks/ChameleonFramework.framework/_CodeSignature/CodeResources</key>
+		<data>
+		1FnS2Wh68OOF7PfWY1WFA0vddks=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/Info.plist</key>
+		<data>
+		9qD/7CfYv63zMRulPUqSRQ/TRN8=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD</key>
+		<data>
+		+VpJzrKqgkyztn9lpMemd+FD90g=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
+		<data>
+		ZP3MEyOzyiMbxQeDcSHXarN3E2I=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png</key>
+		<data>
+		bJrR0ylq3sQNppqIm9ryAXWPJzE=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png</key>
+		<data>
+		e67DzzmwDyqECcm6R5/RNKjbVl8=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png</key>
+		<data>
+		7dq6xarqzSdPyQEKKpVGUWcpCIc=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png</key>
+		<data>
+		14JkE/rT3Tfa4aP0CmgGdheZAds=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png</key>
+		<data>
+		eWTkyKjL4ARvSmVff4vOLLV8GIc=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png</key>
+		<data>
+		DMk9YuaU7CZe64ki8Xed0+svfBQ=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png</key>
+		<data>
+		nrK8FPd2HTtonPvOAyLccnDl7vA=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png</key>
+		<data>
+		t3gMcN3HjVSrntcw4Pu4yOoLazo=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png</key>
+		<data>
+		fFFaIAdJaQLiHAHxtZdSu3UK9mw=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png</key>
+		<data>
+		F+jTDjhSDE75FwiWoc3aVsqlOZU=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png</key>
+		<data>
+		ktkPsgjbXsEzUyaptquUISBzqro=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources</key>
+		<data>
+		Tq+VYgwrNLu+qN93rSgj6KD7fkw=
 		</data>
 		<key>Geography.png</key>
 		<data>
@@ -116,7 +228,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KWoyysM+5AzNfgwB43HTfXfXF8k=
+		G2BmZhZUAfcgZrWHUBBdsyJGIyg=
 		</data>
 		<key>Ladybird.png</key>
 		<data>
@@ -142,6 +254,18 @@
 		<data>
 		DJEohSjrnuo/m4Ox9n4GpRlvLKo=
 		</data>
+		<key>Link.png</key>
+		<data>
+		+eA/xCA+7UTkNJZFfWrI9L7zcnA=
+		</data>
+		<key>Link@2x.png</key>
+		<data>
+		J9W+wo53+cTPuvXBkn1PUs40zy0=
+		</data>
+		<key>Link@3x.png</key>
+		<data>
+		ctGQ0m24MoFkpCnmoMiUesgeImA=
+		</data>
 		<key>Lock.png</key>
 		<data>
 		fKAUAbBs6rDnM3NmwT0X089d010=
@@ -158,53 +282,9 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
-		<key>SVProgressHUD.bundle/angle-mask.png</key>
+		<key>Pods-acknowledgements.plist</key>
 		<data>
-		ZP3MEyOzyiMbxQeDcSHXarN3E2I=
-		</data>
-		<key>SVProgressHUD.bundle/angle-mask@2x.png</key>
-		<data>
-		bJrR0ylq3sQNppqIm9ryAXWPJzE=
-		</data>
-		<key>SVProgressHUD.bundle/angle-mask@3x.png</key>
-		<data>
-		e67DzzmwDyqECcm6R5/RNKjbVl8=
-		</data>
-		<key>SVProgressHUD.bundle/error.png</key>
-		<data>
-		7dq6xarqzSdPyQEKKpVGUWcpCIc=
-		</data>
-		<key>SVProgressHUD.bundle/error@2x.png</key>
-		<data>
-		14JkE/rT3Tfa4aP0CmgGdheZAds=
-		</data>
-		<key>SVProgressHUD.bundle/error@3x.png</key>
-		<data>
-		eWTkyKjL4ARvSmVff4vOLLV8GIc=
-		</data>
-		<key>SVProgressHUD.bundle/info.png</key>
-		<data>
-		DMk9YuaU7CZe64ki8Xed0+svfBQ=
-		</data>
-		<key>SVProgressHUD.bundle/info@2x.png</key>
-		<data>
-		nrK8FPd2HTtonPvOAyLccnDl7vA=
-		</data>
-		<key>SVProgressHUD.bundle/info@3x.png</key>
-		<data>
-		t3gMcN3HjVSrntcw4Pu4yOoLazo=
-		</data>
-		<key>SVProgressHUD.bundle/success.png</key>
-		<data>
-		fFFaIAdJaQLiHAHxtZdSu3UK9mw=
-		</data>
-		<key>SVProgressHUD.bundle/success@2x.png</key>
-		<data>
-		F+jTDjhSDE75FwiWoc3aVsqlOZU=
-		</data>
-		<key>SVProgressHUD.bundle/success@3x.png</key>
-		<data>
-		ktkPsgjbXsEzUyaptquUISBzqro=
+		yq6x4MfSR1QCy5xW4X+xyKJZeKc=
 		</data>
 		<key>Shield.png</key>
 		<data>
@@ -217,6 +297,30 @@
 		<key>Shield@3x.png</key>
 		<data>
 		aDxWwgENrBNkRd5NuPLFbKYsnDY=
+		</data>
+		<key>ShoppingCart.png</key>
+		<data>
+		q1LaWePNVoF4URLO4p1go4oid/8=
+		</data>
+		<key>ShoppingCart@2x.png</key>
+		<data>
+		8fTan4u7+K2mhp92KnzggQCMAhE=
+		</data>
+		<key>ShoppingCart@3x.png</key>
+		<data>
+		fgCvXyiOAtS4+fXe6MzGkHIFBWc=
+		</data>
+		<key>Tag.png</key>
+		<data>
+		WpsRog+yphikQI5LFv7fekI8GCA=
+		</data>
+		<key>Tag@2x.png</key>
+		<data>
+		NsNNF+RP10Sqn5HDEyLEwjUYzI4=
+		</data>
+		<key>Tag@3x.png</key>
+		<data>
+		sfXDopAOwS+fmHD6jcr2S94TH0o=
 		</data>
 		<key>Talk.png</key>
 		<data>
@@ -258,7 +362,7 @@
 		<data>
 		IpiVhdA95purG5TzKkB9szG9qlw=
 		</data>
-		<key>en.lproj/FZZInfoViewControllerLocalizable.strings</key>
+		<key>en.lproj/FZZInfoKitLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -267,29 +371,23 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>ja.lproj/FZZInfoViewControllerLocalizable.strings</key>
+		<key>fzzicon.png</key>
+		<data>
+		rRWmXe8ouIlm+4kyLGXtRq5FhNo=
+		</data>
+		<key>fzzicon@2x.png</key>
+		<data>
+		8wNJXUpzlo7Zfclmp104sJFw2KI=
+		</data>
+		<key>fzzicon@3x.png</key>
+		<data>
+		QneOVpchQxJntpihVBGk/6TUuzI=
+		</data>
+		<key>ja.lproj/FZZInfoKitLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2sK7tOdI4bByfWiKyLOqbeCipz8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>ja.lproj/LaunchScreen.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rcg7GeeTSRscbqD9i0bNnzLlkvw=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>ja.lproj/Main.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rcg7GeeTSRscbqD9i0bNnzLlkvw=
+			9tJgmiCuCsi/jhRim2Qv4vr+cqE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -301,7 +399,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			svQQrE8p2yTCur+Hg3llh+SZrWU=
+			UGBP5TDKklF+OPDSUjw3Ef5QNUw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -319,7 +417,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AQrnfMets6ucB17NHzK1wWJTadA=
+			eLp/Lk7gTsJvHFkcS0emUVE7EZI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -328,7 +426,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZamrKPR2H23imWYMIY4zHl5hnlQ=
+			Z1AaNsYzDQBf35FFHwKGMpEkcdE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -346,18 +444,130 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FbvpUqxzLHrjUTAi7Ji3TC4RKFU=
+			zg/XImpgnoF9dGcaOym7+qQv7wI=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Briefcase-78.png</key>
+		<data>
+		lzRVNC1/h6UbpwzQGGuW/EBXBQA=
+		</data>
+		<key>Briefcase.png</key>
+		<data>
+		nEMf81Ssg2OOO2z9VRi7kY7qSJU=
+		</data>
+		<key>Briefcase@2x.png</key>
+		<data>
+		8Onk0vjlawxhdBmNUCw2iKSRf6o=
+		</data>
+		<key>Document.png</key>
+		<data>
+		i9AkWohPYvUscdWGiV/bkE/lN+k=
+		</data>
+		<key>Document@2x.png</key>
+		<data>
+		7LqHfI6V9/H39p7BDCbEBkBU33U=
+		</data>
+		<key>Document@3x.png</key>
+		<data>
+		oZGzDCUVE4qCiRH0QTaTR1/isbQ=
+		</data>
+		<key>Error.png</key>
+		<data>
+		2N2a9Z1CqQYNzDl35BBTVbG8qzE=
+		</data>
+		<key>Error@2x.png</key>
+		<data>
+		sqU90zOLEUZ38g1yAXN9KOaQLyQ=
+		</data>
+		<key>Error@3x.png</key>
+		<data>
+		pTATzgfbvGgy8hUoPhXpwXk4aEc=
+		</data>
 		<key>FZZInfoCell.nib</key>
 		<data>
-		84QRBahyNMcknnU5KqyinPIAFRc=
+		em6xUEl7HBEeSK7VIfltPTHFBVw=
+		</data>
+		<key>FZZInfoCreditViewController.nib</key>
+		<data>
+		4XoAg/u4sBhTpamDqfZGcI7uWe0=
 		</data>
 		<key>FZZInfoViewController.nib</key>
 		<data>
-		42J6wnHxfWNnDE+3D4mmWFWV2jE=
+		u/DVs8bUC/Slaxg44Nwx4tmG6DM=
+		</data>
+		<key>Frameworks/ChameleonFramework.framework/ChameleonFramework</key>
+		<data>
+		yPZH4xrriieWAtJg4dO1daw1UpE=
+		</data>
+		<key>Frameworks/ChameleonFramework.framework/Info.plist</key>
+		<data>
+		NpH0jbY0uRLihTDmflLU0mu/n5o=
+		</data>
+		<key>Frameworks/ChameleonFramework.framework/_CodeSignature/CodeResources</key>
+		<data>
+		1FnS2Wh68OOF7PfWY1WFA0vddks=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/Info.plist</key>
+		<data>
+		9qD/7CfYv63zMRulPUqSRQ/TRN8=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD</key>
+		<data>
+		+VpJzrKqgkyztn9lpMemd+FD90g=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
+		<data>
+		ZP3MEyOzyiMbxQeDcSHXarN3E2I=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png</key>
+		<data>
+		bJrR0ylq3sQNppqIm9ryAXWPJzE=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png</key>
+		<data>
+		e67DzzmwDyqECcm6R5/RNKjbVl8=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png</key>
+		<data>
+		7dq6xarqzSdPyQEKKpVGUWcpCIc=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png</key>
+		<data>
+		14JkE/rT3Tfa4aP0CmgGdheZAds=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png</key>
+		<data>
+		eWTkyKjL4ARvSmVff4vOLLV8GIc=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png</key>
+		<data>
+		DMk9YuaU7CZe64ki8Xed0+svfBQ=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png</key>
+		<data>
+		nrK8FPd2HTtonPvOAyLccnDl7vA=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png</key>
+		<data>
+		t3gMcN3HjVSrntcw4Pu4yOoLazo=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png</key>
+		<data>
+		fFFaIAdJaQLiHAHxtZdSu3UK9mw=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png</key>
+		<data>
+		F+jTDjhSDE75FwiWoc3aVsqlOZU=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png</key>
+		<data>
+		ktkPsgjbXsEzUyaptquUISBzqro=
+		</data>
+		<key>Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources</key>
+		<data>
+		Tq+VYgwrNLu+qN93rSgj6KD7fkw=
 		</data>
 		<key>Geography.png</key>
 		<data>
@@ -431,6 +641,18 @@
 		<data>
 		DJEohSjrnuo/m4Ox9n4GpRlvLKo=
 		</data>
+		<key>Link.png</key>
+		<data>
+		+eA/xCA+7UTkNJZFfWrI9L7zcnA=
+		</data>
+		<key>Link@2x.png</key>
+		<data>
+		J9W+wo53+cTPuvXBkn1PUs40zy0=
+		</data>
+		<key>Link@3x.png</key>
+		<data>
+		ctGQ0m24MoFkpCnmoMiUesgeImA=
+		</data>
 		<key>Lock.png</key>
 		<data>
 		fKAUAbBs6rDnM3NmwT0X089d010=
@@ -443,53 +665,9 @@
 		<data>
 		lxIDjIqX9TtzcQduYTjfE/10hJQ=
 		</data>
-		<key>SVProgressHUD.bundle/angle-mask.png</key>
+		<key>Pods-acknowledgements.plist</key>
 		<data>
-		ZP3MEyOzyiMbxQeDcSHXarN3E2I=
-		</data>
-		<key>SVProgressHUD.bundle/angle-mask@2x.png</key>
-		<data>
-		bJrR0ylq3sQNppqIm9ryAXWPJzE=
-		</data>
-		<key>SVProgressHUD.bundle/angle-mask@3x.png</key>
-		<data>
-		e67DzzmwDyqECcm6R5/RNKjbVl8=
-		</data>
-		<key>SVProgressHUD.bundle/error.png</key>
-		<data>
-		7dq6xarqzSdPyQEKKpVGUWcpCIc=
-		</data>
-		<key>SVProgressHUD.bundle/error@2x.png</key>
-		<data>
-		14JkE/rT3Tfa4aP0CmgGdheZAds=
-		</data>
-		<key>SVProgressHUD.bundle/error@3x.png</key>
-		<data>
-		eWTkyKjL4ARvSmVff4vOLLV8GIc=
-		</data>
-		<key>SVProgressHUD.bundle/info.png</key>
-		<data>
-		DMk9YuaU7CZe64ki8Xed0+svfBQ=
-		</data>
-		<key>SVProgressHUD.bundle/info@2x.png</key>
-		<data>
-		nrK8FPd2HTtonPvOAyLccnDl7vA=
-		</data>
-		<key>SVProgressHUD.bundle/info@3x.png</key>
-		<data>
-		t3gMcN3HjVSrntcw4Pu4yOoLazo=
-		</data>
-		<key>SVProgressHUD.bundle/success.png</key>
-		<data>
-		fFFaIAdJaQLiHAHxtZdSu3UK9mw=
-		</data>
-		<key>SVProgressHUD.bundle/success@2x.png</key>
-		<data>
-		F+jTDjhSDE75FwiWoc3aVsqlOZU=
-		</data>
-		<key>SVProgressHUD.bundle/success@3x.png</key>
-		<data>
-		ktkPsgjbXsEzUyaptquUISBzqro=
+		yq6x4MfSR1QCy5xW4X+xyKJZeKc=
 		</data>
 		<key>Shield.png</key>
 		<data>
@@ -502,6 +680,30 @@
 		<key>Shield@3x.png</key>
 		<data>
 		aDxWwgENrBNkRd5NuPLFbKYsnDY=
+		</data>
+		<key>ShoppingCart.png</key>
+		<data>
+		q1LaWePNVoF4URLO4p1go4oid/8=
+		</data>
+		<key>ShoppingCart@2x.png</key>
+		<data>
+		8fTan4u7+K2mhp92KnzggQCMAhE=
+		</data>
+		<key>ShoppingCart@3x.png</key>
+		<data>
+		fgCvXyiOAtS4+fXe6MzGkHIFBWc=
+		</data>
+		<key>Tag.png</key>
+		<data>
+		WpsRog+yphikQI5LFv7fekI8GCA=
+		</data>
+		<key>Tag@2x.png</key>
+		<data>
+		NsNNF+RP10Sqn5HDEyLEwjUYzI4=
+		</data>
+		<key>Tag@3x.png</key>
+		<data>
+		sfXDopAOwS+fmHD6jcr2S94TH0o=
 		</data>
 		<key>Talk.png</key>
 		<data>
@@ -543,7 +745,7 @@
 		<data>
 		IpiVhdA95purG5TzKkB9szG9qlw=
 		</data>
-		<key>en.lproj/FZZInfoViewControllerLocalizable.strings</key>
+		<key>en.lproj/FZZInfoKitLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -552,29 +754,23 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>ja.lproj/FZZInfoViewControllerLocalizable.strings</key>
+		<key>fzzicon.png</key>
+		<data>
+		rRWmXe8ouIlm+4kyLGXtRq5FhNo=
+		</data>
+		<key>fzzicon@2x.png</key>
+		<data>
+		8wNJXUpzlo7Zfclmp104sJFw2KI=
+		</data>
+		<key>fzzicon@3x.png</key>
+		<data>
+		QneOVpchQxJntpihVBGk/6TUuzI=
+		</data>
+		<key>ja.lproj/FZZInfoKitLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2sK7tOdI4bByfWiKyLOqbeCipz8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>ja.lproj/LaunchScreen.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rcg7GeeTSRscbqD9i0bNnzLlkvw=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>ja.lproj/Main.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rcg7GeeTSRscbqD9i0bNnzLlkvw=
+			9tJgmiCuCsi/jhRim2Qv4vr+cqE=
 			</data>
 			<key>optional</key>
 			<true/>

@@ -1,10 +1,15 @@
 PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
   - SVProgressHUD (HEAD based on 2.0-beta8)
 
 DEPENDENCIES:
+  - ChameleonFramework
   - SVProgressHUD (HEAD)
 
 SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   SVProgressHUD: 6e48a1dda09ce3b58adc41d013baed3a8e8980ff
 
 COCOAPODS: 0.39.0

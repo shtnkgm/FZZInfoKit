@@ -11,8 +11,8 @@
 @implementation FZZInfoCell
 
 - (void)awakeFromNib {
-    [[self.iconImageView layer] setCornerRadius:self.iconImageView.frame.size.width*225/1024.0f];
-    self.iconImageView.clipsToBounds = YES;
+    //[[self.iconImageView layer] setCornerRadius:self.iconImageView.frame.size.width*225/1024.0f];
+    //self.iconImageView.clipsToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

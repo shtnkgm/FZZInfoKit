@@ -1,0 +1,31 @@
+/*
+ FZZInfoViewControllerLocalizable.strings
+ CommonParts
+ 
+ Created by Administrator on 2014/10/11.
+ Copyright (c) 2014年 Shota Nakagami. All rights reserved.
+ */
+
+"Network Error" = "通信エラー";
+
+//ナビゲーションタイトル
+"Info" = "情報";
+"Close" = "閉じる";
+
+//セクション名
+"User Feedback" = "フィードバック";
+"Creater" = "開発者";
+"AppInfo" = "アプリ情報";
+
+//アクション名
+"Portfolio Site" = "ポートフォリオサイト";
+"Rate/Review in AppStore" = "AppStoreのレビューを書く";
+"Report a bug" = "問題を報告";
+"Tell a friend" = "友達にすすめる";
+"Other Apps" = "AppStoreのその他アプリ";
+"Privacy Policy" = "プライバシーポリシー";
+"Open Source License" = "オープンソースライセンス";
+
+//情報名
+"AppName" = "アプリ名";
+"Version" = "バージョン";

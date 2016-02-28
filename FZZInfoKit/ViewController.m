@@ -7,10 +7,16 @@
 //
 
 #import "ViewController.h"
-#import "FZZInfoNavigationController.h"
+
+#import "FZZInfoKit.h"
 
 @interface ViewController ()
-<FZZInfoNavigationControllerDelegate>
+
+<FZZInfoKitDelegate>
+
+@property (nonatomic, assign) BOOL opend;
+
+@property (nonatomic, strong) FZZInfoKit *infoKit;
 
 @end
 
@@ -20,20 +26,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-
+    _opend = NO;
 }
 
-- (void)viewDidAppear:(BOOL)animated{    
-    FZZInfoNavigationController *vc = [FZZInfoNavigationController new];
-    //vc.appIDString = @"480099135";
+- (void)viewDidAppear:(BOOL)animated{
     
-    vc.closeDelegate = self;
-    [self presentViewController:vc
-                       animated:YES
-                     completion:nil];
+    if(_opend){
+        return;
+    }
+    
+    self.infoKit = [FZZInfoKit new];
+    self.infoKit.letIconRound = YES;
+    [self.infoKit showInfoWithAppID:@"480099135"
+                           iconName:@"fzzicon"
+                           delegate:self
+                           animated:YES];
+    
+    _opend = YES;
 }
 
-- (void)viewWillClose{
+- (void)FZZInfoKitWillClose{
     [self dismissViewControllerAnimated:YES
                              completion:nil];
 }

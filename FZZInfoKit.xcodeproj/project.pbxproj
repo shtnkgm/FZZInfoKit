@@ -62,6 +62,8 @@
 		C37DBD741C7967E10016DF09 /* Tag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C37DBD711C7967E10016DF09 /* Tag@2x.png */; };
 		C37DBD751C7967E10016DF09 /* Tag@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C37DBD721C7967E10016DF09 /* Tag@3x.png */; };
 		C37DBD791C79E8A80016DF09 /* NSString+Localized.m in Sources */ = {isa = PBXBuildFile; fileRef = C37DBD781C79E8A80016DF09 /* NSString+Localized.m */; };
+		C38C43F01C8472A30013D3B2 /* FZZInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C38C43EF1C8472A30013D3B2 /* FZZInfoViewModel.m */; };
+		C38C43F31C8479C80013D3B2 /* FZZInfoViewModelEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = C38C43F21C8479C80013D3B2 /* FZZInfoViewModelEntity.m */; };
 		C39D4E891C7F1937004A4A6B /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39D4E881C7F1937004A4A6B /* Pods-acknowledgements.plist */; };
 		C39D4E8D1C7F19EC004A4A6B /* fzzicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C39D4E8A1C7F19EC004A4A6B /* fzzicon.png */; };
 		C39D4E8E1C7F19EC004A4A6B /* fzzicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39D4E8B1C7F19EC004A4A6B /* fzzicon@2x.png */; };
@@ -142,6 +144,10 @@
 		C37DBD721C7967E10016DF09 /* Tag@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tag@3x.png"; sourceTree = "<group>"; };
 		C37DBD771C79E8A80016DF09 /* NSString+Localized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Localized.h"; sourceTree = "<group>"; };
 		C37DBD781C79E8A80016DF09 /* NSString+Localized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Localized.m"; sourceTree = "<group>"; };
+		C38C43EE1C8472A30013D3B2 /* FZZInfoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZZInfoViewModel.h; sourceTree = "<group>"; };
+		C38C43EF1C8472A30013D3B2 /* FZZInfoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZZInfoViewModel.m; sourceTree = "<group>"; };
+		C38C43F11C8479C80013D3B2 /* FZZInfoViewModelEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZZInfoViewModelEntity.h; sourceTree = "<group>"; };
+		C38C43F21C8479C80013D3B2 /* FZZInfoViewModelEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZZInfoViewModelEntity.m; sourceTree = "<group>"; };
 		C39D4E881C7F1937004A4A6B /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		C39D4E8A1C7F19EC004A4A6B /* fzzicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fzzicon.png; sourceTree = "<group>"; };
 		C39D4E8B1C7F19EC004A4A6B /* fzzicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fzzicon@2x.png"; sourceTree = "<group>"; };
@@ -261,6 +267,10 @@
 			children = (
 				C3A2C6331C5F4B5600FE057B /* FZZInfoViewController.h */,
 				C3A2C6341C5F4B5600FE057B /* FZZInfoViewController.m */,
+				C38C43EE1C8472A30013D3B2 /* FZZInfoViewModel.h */,
+				C38C43EF1C8472A30013D3B2 /* FZZInfoViewModel.m */,
+				C38C43F11C8479C80013D3B2 /* FZZInfoViewModelEntity.h */,
+				C38C43F21C8479C80013D3B2 /* FZZInfoViewModelEntity.m */,
 				C3A2C68C1C6A1EF700FE057B /* FZZInfoViewController.xib */,
 				C3A2C6301C5F4B5600FE057B /* FZZInfoCell.h */,
 				C3A2C6311C5F4B5600FE057B /* FZZInfoCell.m */,
@@ -513,7 +523,9 @@
 			files = (
 				C3A2C6391C5F4B5600FE057B /* FZZInfoViewController.m in Sources */,
 				C37DBD791C79E8A80016DF09 /* NSString+Localized.m in Sources */,
+				C38C43F31C8479C80013D3B2 /* FZZInfoViewModelEntity.m in Sources */,
 				C3A2C6211C5F4B3C00FE057B /* ViewController.m in Sources */,
+				C38C43F01C8472A30013D3B2 /* FZZInfoViewModel.m in Sources */,
 				C3A2C61E1C5F4B3C00FE057B /* AppDelegate.m in Sources */,
 				C3A2C6371C5F4B5600FE057B /* FZZInfoCell.m in Sources */,
 				C37DBD6F1C7957870016DF09 /* FZZInfoKit.m in Sources */,

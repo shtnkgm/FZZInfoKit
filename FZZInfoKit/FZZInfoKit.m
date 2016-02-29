@@ -31,7 +31,7 @@
                  iconName:(NSString *)iconName
                  delegate:(UIViewController *)delegate
                  animated:(BOOL)animeted{
-        
+    
     __weak id weakDelegate = delegate;
     
     self.delegate = weakDelegate;
@@ -54,7 +54,7 @@
                                                                   action:@selector(doneButtonDidPushed:)];
     
     self.navigationController.navigationBar.topItem.leftBarButtonItem = doneButton;
-
+    
     
     [_delegate presentViewController:self.navigationController
                             animated:animeted

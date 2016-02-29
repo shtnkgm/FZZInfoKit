@@ -10,9 +10,12 @@
 
 @implementation FZZInfoCell
 
-- (void)awakeFromNib {
-    //[[self.iconImageView layer] setCornerRadius:self.iconImageView.frame.size.width*225/1024.0f];
-    //self.iconImageView.clipsToBounds = YES;
+- (void)awakeFromNib {    
+    self.rightLabel.font = [UIFont systemFontOfSize:16.0];
+    self.leftLabel.font = [UIFont systemFontOfSize:16.0];
+    
+    self.rightLabel.textColor = [UIColor blackColor];
+    self.leftLabel.textColor = [UIColor blackColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

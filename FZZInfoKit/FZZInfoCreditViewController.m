@@ -20,7 +20,7 @@
 {
     return YES;
 }
- 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -73,7 +73,7 @@
     
     self.textView.text = lisencesString;
 }
- 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -82,7 +82,7 @@
 {
     NSBundle *bundle;
     NSURL *bundleURL = [[NSBundle mainBundle] URLForResource:@"FZZInfoKit" withExtension:@"bundle"];
-
+    
     if (bundleURL) {
         bundle = [NSBundle bundleWithURL:bundleURL];
     } else {

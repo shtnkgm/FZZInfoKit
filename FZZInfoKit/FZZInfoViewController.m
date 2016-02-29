@@ -9,20 +9,12 @@
 #import "FZZInfoViewController.h"
 #import "FZZInfoCell.h"
 #import "FZZInfoCreditViewController.h"
-#import "NSString+Localized.h"
+#import "FZZInfoViewModel.h"
+#import "FZZInfoViewModelEntity.h"
 
 //オープンソースライブラリ
 #import "SVProgressHUD.h"
 #import "Chameleon.h"
-
-#include <sys/types.h>
-#include <sys/sysctl.h>
-
-static NSString *const kName = @"name";
-static NSString *const kRows = @"rows";
-static NSString *const kValue = @"value";
-static NSString *const kUrl = @"url";
-static NSString *const kFile = @"file";
 
 @interface FZZInfoViewController ()
 <UITableViewDataSource,
@@ -31,27 +23,12 @@ UINavigationControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
-@property (nonatomic, strong) NSMutableArray *data;
+@property (nonatomic,strong) FZZInfoViewModel *model;
 
 @property (nonatomic, strong) UIView *iconView;
 @property (nonatomic, strong) UIButton *icon;
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *detailLabel;
-
-@property (nonatomic, copy) NSString *supportSiteURL;
-@property (nonatomic, copy) NSString *developerID;
-@property (nonatomic, copy) NSString *icons8URL;
-@property (nonatomic, copy) NSString *bugReportURL;
-@property (nonatomic, copy) NSString *bugReportURLWithOption;
-@property (nonatomic, copy) NSString *privacyPolicyURL;
-@property (nonatomic, copy) NSString *appstoreURL;
-@property (nonatomic, copy) NSString *reviewPageURL;
-@property (nonatomic, copy) NSString *otherAppsURL;
-@property (nonatomic, copy) NSString *appName;
-@property (nonatomic, copy) NSString *appVersion;
-@property (nonatomic, copy) NSString *iOSVersion;
-
-@property (nonatomic, copy) NSString *infoFormID;
 
 @end
 
@@ -66,27 +43,10 @@ UINavigationControllerDelegate>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [SVProgressHUD setForegroundColor:_keyColor];
 
-    //初期化
-    self.appName = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"];
-    self.appVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
-    self.developerID = @"457011383";
-    self.supportSiteURL = @"http://shtnkgm.github.io";
-    self.bugReportURL = @"https://docs.google.com/forms/d/1jAD7A1ch6D1SXbxf3hPzF15hicTbxKadaHf03axRbQk/viewform";
-    self.privacyPolicyURL = @"http://shtnkgm.github.io/privacy.html";
-    self.appstoreURL = [NSString stringWithFormat:@"https://itunes.apple.com/app/id%@",_appID];
-    self.reviewPageURL = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",_appID];
-    self.otherAppsURL = @"itms-apps://itunes.com/apps/shotanakagami";
-    
-    self.infoFormID = @"entry_724500489";
-    self.iOSVersion = [[UIDevice currentDevice] systemVersion];
-    
-    NSString *option = [[NSString stringWithFormat:@"・%@(Ver.%@)\n・%@(iOS%@)",_appName,_appVersion,[self platform],_iOSVersion] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    //URLエンコード
-    
-    self.bugReportURLWithOption = [NSString stringWithFormat:@"%@?%@=%@",_bugReportURL,_infoFormID,option];
+    self.model = [[FZZInfoViewModel alloc] initWithAppID:_appID];
+
+    [SVProgressHUD setForegroundColor:_keyColor];
     
     //TableViewセルの初期化
     UINib *nib = [UINib nibWithNibName:@"FZZInfoCell" bundle:nil];
@@ -94,6 +54,15 @@ UINavigationControllerDelegate>
     
     self.tableView.contentInset = UIEdgeInsetsMake(190, 0, 0, 0);
     
+    [self addHeaderView];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    [self.tableView reloadData];
+}
+
+- (void)addHeaderView{
     self.iconView = [UIView new];
     self.iconView.backgroundColor = FlatNavyBlueDark;
     [self.tableView addSubview:self.iconView];
@@ -114,7 +83,7 @@ UINavigationControllerDelegate>
     [self.iconView addSubview:self.icon];
     
     self.titleLabel = [UILabel new];
-    self.titleLabel.text = [NSString stringWithFormat:@"%@",_appName];
+    self.titleLabel.text = [NSString stringWithFormat:@"%@",_model.appName];
     self.titleLabel.font = [UIFont fontWithName:@"Avenir-BookOblique" size:20];
     self.titleLabel.textColor = [UIColor whiteColor];
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -126,31 +95,10 @@ UINavigationControllerDelegate>
     self.detailLabel.textColor = [UIColor lightGrayColor];
     self.detailLabel.textAlignment = NSTextAlignmentCenter;
     [self.iconView addSubview:self.detailLabel];
-
-    self.data = [NSMutableArray array];
-    
-    [self setSupportDictionary];
-    [self setDeveloperDictionary];
-    [self setAppInfoDictionary];
-    
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    
-    [self.tableView reloadData];
 }
 
 - (void)iconTapped:(UIButton *)sender{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_reviewPageURL]];
-}
-
-- (NSString *)platform{
-    size_t size;
-    sysctlbyname("hw.machine", NULL, &size, NULL, 0);
-    char *machine = malloc(size);
-    sysctlbyname("hw.machine", machine, &size, NULL, 0);
-    NSString *platform = [NSString stringWithCString:machine encoding:NSUTF8StringEncoding];
-    free(machine);
-    return platform;
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_model.reviewPageURL]];
 }
 
 - (void)viewDidLayoutSubviews{
@@ -168,98 +116,6 @@ UINavigationControllerDelegate>
     
 }
 
-# pragma mark ExtractMethod
-- (void)addSection:(NSInteger)sectionIndex name:(NSString *)name{
-    
-    [_data addObject:[NSMutableDictionary dictionary]];
-    
-    //セクション名を追加
-    _data[sectionIndex][kName] = [name localized];
-    
-    //配列を追加
-    _data[sectionIndex][kRows] = [NSMutableArray array];
-}
-
-- (void)addRowInSection:(NSInteger)sectionIndex
-                   name:(NSString *)name
-                  value:(NSString *)value
-                    url:(NSString *)url
-                   file:(NSString *)file{
-    
-    NSInteger rowIndex = [_data[sectionIndex][kRows] count];
-    
-    //辞書を追加
-    
-    [_data[sectionIndex][kRows] addObject:[NSMutableDictionary dictionary]];
-  
-    _data[sectionIndex][kRows][rowIndex][kName] = [name localized];
-    _data[sectionIndex][kRows][rowIndex][kValue] = [value localized];
-    _data[sectionIndex][kRows][rowIndex][kUrl] = url;
-    _data[sectionIndex][kRows][rowIndex][kFile] = file;
-}
-
-- (void)setSupportDictionary {
-    NSInteger sectionIndex = [_data count];
-    
-    [self addSection:sectionIndex name:@"User Feedback"];
-    
-    [self addRowInSection:sectionIndex
-                     name:@"Rate/Review in AppStore"
-                    value:nil
-                      url:_reviewPageURL
-                     file:@"Like"];
-    [self addRowInSection:sectionIndex
-                     name:@"Report a bug"
-                    value:nil
-                      url:_bugReportURLWithOption
-                     file:@"Error"];
-    [self addRowInSection:sectionIndex
-                     name:@"Tell a friend"
-                    value:nil
-                      url:@"friend"
-                     file:@"Talk"];
-}
-
-- (void)setDeveloperDictionary {
-    NSInteger sectionIndex = [_data count];
-    
-    [self addSection:sectionIndex name:@"Creater"];
-    
-    [self addRowInSection:sectionIndex
-                     name:@"Other Apps"
-                    value:nil
-                      url:_otherAppsURL
-                     file:@"ShoppingCart"];
-    [self addRowInSection:sectionIndex
-                     name:@"Portfolio Site"
-                    value:nil
-                      url:_supportSiteURL
-                     file:@"Briefcase"];
-}
-
-
-- (void)setAppInfoDictionary {
-    NSInteger sectionIndex = [_data count];
-    
-    [self addSection:sectionIndex name:@"AppInfo"];
-    
-    [self addRowInSection:sectionIndex
-                     name:@"Version"
-                    value:_appVersion
-                      url:nil
-                     file:@"Tag"];
-    [self addRowInSection:sectionIndex
-                     name:@"Open Source License"
-                    value:nil
-                      url:@"credit"
-                     file:@"Document"];
-    [self addRowInSection:sectionIndex
-                     name:@"Privacy Policy"
-                    value:nil
-                      url:_privacyPolicyURL
-                     file:@"Lock"];
-}
-
 # pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 44.0f;
@@ -272,20 +128,20 @@ UINavigationControllerDelegate>
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [_tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSString *url = _data[indexPath.section][kRows][indexPath.row][kUrl];
+    FZZInfoViewModelEntity *entity = [_model rowWithIndexPath:indexPath];
     
-    if([url isEqualToString:@"friend"]){
+    if([entity.url isEqualToString:FZZInfoViewModelFrinedUrl]){
         [self useActivityViewController];
         return;
     }
     
-    if([url isEqualToString:@"credit"]){
+    if([entity.url isEqualToString:FZZInfoViewModelCreditUrl]){
         FZZInfoCreditViewController *viewController = [FZZInfoCreditViewController new];
         [self.navigationController pushViewController:viewController animated:YES];
     }
     
-    if (url){
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+    if (entity.url){
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:entity.url]];
         return;
     }
 }
@@ -295,7 +151,7 @@ UINavigationControllerDelegate>
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 36)];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(16, 14, tableView.frame.size.width-16*2, 22)];
-    label.text = _data[section][kName];
+    label.text = [_model sectionNameWithSection:section];
     
     [label setFont:[UIFont systemFontOfSize:15.0]];
     [label setTextColor:[UIColor grayColor]];
@@ -306,27 +162,22 @@ UINavigationControllerDelegate>
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return [_data count];
+    return [_model numberOfSections];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [_data[section][kRows] count];
+    return [_model numberOfRowsinSection:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    FZZInfoViewModelEntity *entity = [_model rowWithIndexPath:indexPath];
     FZZInfoCell *cell = (FZZInfoCell *)[tableView dequeueReusableCellWithIdentifier:@"InfoCell"];
     
-    cell.leftLabel.text = _data[indexPath.section][kRows][indexPath.row][kName];
-    cell.rightLabel.text = _data[indexPath.section][kRows][indexPath.row][kValue];
+    cell.leftLabel.text = entity.name;
+    cell.rightLabel.text = entity.value;
     
-    cell.rightLabel.font = [UIFont systemFontOfSize:16.0];
-    cell.leftLabel.font = [UIFont systemFontOfSize:16.0];
-    
-    cell.rightLabel.textColor = [UIColor blackColor];
-    cell.leftLabel.textColor = [UIColor blackColor];
-    
-    if(_data[indexPath.section][kRows][indexPath.row][kFile]){
-        UIImage *image = [self imageNamedWithoutCache:_data[indexPath.section][kRows][indexPath.row][kFile]];
+    if(entity.file){
+        UIImage *image = [self imageNamedWithoutCache:entity.file];
         image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         cell.iconImageView.tintColor = _keyColor;
         cell.iconImageView.image = image;
@@ -334,9 +185,7 @@ UINavigationControllerDelegate>
         cell.iconImageView.image = nil;
     }
     
-    NSString *url = _data[indexPath.section][kRows][indexPath.row][kUrl];
-    
-    if(url){
+    if(entity.url){
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }else{
@@ -354,7 +203,7 @@ UINavigationControllerDelegate>
 }
 
 - (void)useActivityViewController{
-    NSString *shareText = [NSString stringWithFormat:@"%@\n%@",_appName,_appstoreURL];
+    NSString *shareText = [NSString stringWithFormat:@"%@\n%@",_model.appName,_model.appstoreURL];
     NSArray *activityItems = @[shareText];
     
     //非表示にするアクティビティ

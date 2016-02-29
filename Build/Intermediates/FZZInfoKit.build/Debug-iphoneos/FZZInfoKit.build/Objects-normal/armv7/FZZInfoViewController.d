@@ -3,7 +3,8 @@ dependencies: \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/FZZInfoViewController.h \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/FZZInfoCell.h \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/FZZInfoCreditViewController.h \
-  /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/NSString+Localized.h \
+  /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/FZZInfoViewModel.h \
+  /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/FZZInfoViewModelEntity.h \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/Build/Products/Debug-iphoneos/SVProgressHUD.framework/Headers/SVProgressHUD.h \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/Build/Products/Debug-iphoneos/ChameleonFramework.framework/Headers/Chameleon.h \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/Build/Products/Debug-iphoneos/ChameleonFramework.framework/Headers/Chameleon_.h \

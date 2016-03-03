@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Shota Nakagami. All rights reserved.
 //
 
-#import "NSString+Localized.h"
+#import "NSString+FZZInfoKitLocalized.h"
 
-@implementation NSString (Localized)
+@implementation NSString (FZZInfoKitLocalized)
 
 - (instancetype)localized{
     NSString *localizedFileName = @"FZZInfoKitLocalizable";

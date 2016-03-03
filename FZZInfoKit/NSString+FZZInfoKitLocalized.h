@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Localized)
+@interface NSString (FZZInfoKitLocalized)
 
 - (instancetype)localized;
 

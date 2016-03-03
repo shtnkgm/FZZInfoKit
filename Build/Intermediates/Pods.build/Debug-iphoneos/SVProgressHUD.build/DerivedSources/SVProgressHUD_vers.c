@@ -1,1 +1,1 @@
- const unsigned char SVProgressHUDVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:SVProgressHUD  PROJECT:Pods-1" "\n"; const double SVProgressHUDVersionNumber __attribute__ ((used)) = (double)1.;
+ const unsigned char SVProgressHUDVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:SVProgressHUD  PROJECT:Pods-2.0.0" "\n"; const double SVProgressHUDVersionNumber __attribute__ ((used)) = (double)2.0;

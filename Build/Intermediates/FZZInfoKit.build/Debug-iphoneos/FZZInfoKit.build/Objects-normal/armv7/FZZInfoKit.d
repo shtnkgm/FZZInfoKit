@@ -17,4 +17,4 @@ dependencies: \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/Build/Products/Debug-iphoneos/ChameleonFramework.framework/Headers/UIView+ChameleonPrivate.h \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/Build/Products/Debug-iphoneos/ChameleonFramework.framework/Headers/UIAppearance+Swift.h \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/FZZInfoViewController.h \
-  /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/NSString+Localized.h
+  /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/NSString+FZZInfoKitLocalized.h

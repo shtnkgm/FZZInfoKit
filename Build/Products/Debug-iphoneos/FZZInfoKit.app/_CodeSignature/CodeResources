@@ -8,7 +8,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UGBP5TDKklF+OPDSUjw3Ef5QNUw=
+			OUBvky+Q+rwt/bmDYLB1nMQgbM8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -26,7 +26,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eLp/Lk7gTsJvHFkcS0emUVE7EZI=
+			x2LN+wWuALO+tSPxpsyxaocAo/w=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -35,7 +35,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Z1AaNsYzDQBf35FFHwKGMpEkcdE=
+			NITo8REIeLJFuyI5wSEyssoKL5o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -53,7 +53,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zg/XImpgnoF9dGcaOym7+qQv7wI=
+			LQ6SJoLaULyDuCF7JbZzyej/iMM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -96,19 +96,19 @@
 		</data>
 		<key>FZZInfoCell.nib</key>
 		<data>
-		em6xUEl7HBEeSK7VIfltPTHFBVw=
+		ay5S0aq5p/k5V9/ZdNnhWUHpSLw=
 		</data>
 		<key>FZZInfoCreditViewController.nib</key>
 		<data>
-		RkHJ9X1KZucqckJ51lbbXg6mAO8=
+		6QeBPIfpg32NHMsMwHA8qZs0S3Y=
 		</data>
 		<key>FZZInfoViewController.nib</key>
 		<data>
-		+MblRsMpsm3HicuNxfo3A1vhEQU=
+		GoX83+ZPZ6Bg9XhuHBXVVXTsPcU=
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/ChameleonFramework</key>
 		<data>
-		BciuCpK1gSr1Lm1/iG560hGXcKU=
+		WTTYpSMUnmkBmk/h+47DEsFtK0o=
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/Info.plist</key>
 		<data>
@@ -124,7 +124,7 @@
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD</key>
 		<data>
-		ZAdXUyuwj9RvmWSXmwrkxODwZF4=
+		qSPfFXdvtE8Chx4DsSjyRK9e+JQ=
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
 		<data>
@@ -178,69 +178,9 @@
 		<data>
 		Tq+VYgwrNLu+qN93rSgj6KD7fkw=
 		</data>
-		<key>Geography.png</key>
-		<data>
-		DlX3L5MbR6fd12juEPGj+b3JP1g=
-		</data>
-		<key>Geography@2x.png</key>
-		<data>
-		rKZos0axm9nEjWGFegqMNJATaNs=
-		</data>
-		<key>Geography@3x.png</key>
-		<data>
-		ZJQfnbLeNfRx/jGvM7aB5mC5yZE=
-		</data>
-		<key>Gift.png</key>
-		<data>
-		k9D6nEQSPcr+jc67wlmzUGdNleI=
-		</data>
-		<key>Gift@2x.png</key>
-		<data>
-		m1XqXJLRuwW1eRnYu9GZLj6QKh0=
-		</data>
-		<key>Gift@3x.png</key>
-		<data>
-		oMTqJVP8aEFvafB5o3aT3BFYJSk=
-		</data>
-		<key>GoodQuality.png</key>
-		<data>
-		J0e3/F+S34lUdMBI3cC/5AkDEu8=
-		</data>
-		<key>GoodQuality@2x.png</key>
-		<data>
-		p6smw5QAByed7Lc/0X5+AE8KF10=
-		</data>
-		<key>GoodQuality@3x.png</key>
-		<data>
-		itDl2ms1hd3HGCWxrrKpSvZLFoA=
-		</data>
-		<key>Icons8Logo.png</key>
-		<data>
-		2nhdTXOf6FHvByObeChcWIR3an8=
-		</data>
-		<key>Icons8Logo@2x.png</key>
-		<data>
-		55lrx5LVzWXXK6Sys3n5/2jor8c=
-		</data>
-		<key>Icons8Logo@3x.png</key>
-		<data>
-		wvwjVUI8zehW4RBfG/1CYs3tiyU=
-		</data>
 		<key>Info.plist</key>
 		<data>
 		G2BmZhZUAfcgZrWHUBBdsyJGIyg=
-		</data>
-		<key>Ladybird.png</key>
-		<data>
-		sFpx+X6VIx5FnykO82aQ6yGzhOY=
-		</data>
-		<key>Ladybird@2x.png</key>
-		<data>
-		ozHCuxsnjZfDbKEVYtSQhSNQfmw=
-		</data>
-		<key>Ladybird@3x.png</key>
-		<data>
-		dSSBA2GQuDeP7vHwvTcNJHR5wgE=
 		</data>
 		<key>Like.png</key>
 		<data>
@@ -253,18 +193,6 @@
 		<key>Like@3x.png</key>
 		<data>
 		DJEohSjrnuo/m4Ox9n4GpRlvLKo=
-		</data>
-		<key>Link.png</key>
-		<data>
-		+eA/xCA+7UTkNJZFfWrI9L7zcnA=
-		</data>
-		<key>Link@2x.png</key>
-		<data>
-		J9W+wo53+cTPuvXBkn1PUs40zy0=
-		</data>
-		<key>Link@3x.png</key>
-		<data>
-		ctGQ0m24MoFkpCnmoMiUesgeImA=
 		</data>
 		<key>Lock.png</key>
 		<data>
@@ -285,18 +213,6 @@
 		<key>Pods-acknowledgements.plist</key>
 		<data>
 		yq6x4MfSR1QCy5xW4X+xyKJZeKc=
-		</data>
-		<key>Shield.png</key>
-		<data>
-		z5tgxvBXvqLcxIkvo3EcIOFF2F8=
-		</data>
-		<key>Shield@2x.png</key>
-		<data>
-		gY1O3W56iG/0xf//02t2F94wuRU=
-		</data>
-		<key>Shield@3x.png</key>
-		<data>
-		aDxWwgENrBNkRd5NuPLFbKYsnDY=
 		</data>
 		<key>ShoppingCart.png</key>
 		<data>
@@ -333,30 +249,6 @@
 		<key>Talk@3x.png</key>
 		<data>
 		0iIXtaLU7Bgc1o0L/z+0/YgxKS8=
-		</data>
-		<key>ThumbUp.png</key>
-		<data>
-		SHkcdyXRUrw+qQVMppHBHwwUNXc=
-		</data>
-		<key>ThumbUp@2x.png</key>
-		<data>
-		Xk51Il2wa+T/WK7oujUCLhLVz28=
-		</data>
-		<key>ThumbUp@3x.png</key>
-		<data>
-		t4kfXDUopfRNmKHpz14KQp9Kht4=
-		</data>
-		<key>ThumbsDown.png</key>
-		<data>
-		JdI7O8hRkaTTzZY+zOZ1KShPDhA=
-		</data>
-		<key>ThumbsDown@2x.png</key>
-		<data>
-		dXik8sx2gKmNrM0nRQxps5J6KUo=
-		</data>
-		<key>ThumbsDown@3x.png</key>
-		<data>
-		uyggsMQ76YaxJ7Uqqn9Do3q9L9w=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -399,7 +291,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UGBP5TDKklF+OPDSUjw3Ef5QNUw=
+			OUBvky+Q+rwt/bmDYLB1nMQgbM8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -417,7 +309,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eLp/Lk7gTsJvHFkcS0emUVE7EZI=
+			x2LN+wWuALO+tSPxpsyxaocAo/w=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -426,7 +318,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Z1AaNsYzDQBf35FFHwKGMpEkcdE=
+			NITo8REIeLJFuyI5wSEyssoKL5o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -444,7 +336,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zg/XImpgnoF9dGcaOym7+qQv7wI=
+			LQ6SJoLaULyDuCF7JbZzyej/iMM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -487,19 +379,19 @@
 		</data>
 		<key>FZZInfoCell.nib</key>
 		<data>
-		em6xUEl7HBEeSK7VIfltPTHFBVw=
+		ay5S0aq5p/k5V9/ZdNnhWUHpSLw=
 		</data>
 		<key>FZZInfoCreditViewController.nib</key>
 		<data>
-		RkHJ9X1KZucqckJ51lbbXg6mAO8=
+		6QeBPIfpg32NHMsMwHA8qZs0S3Y=
 		</data>
 		<key>FZZInfoViewController.nib</key>
 		<data>
-		+MblRsMpsm3HicuNxfo3A1vhEQU=
+		GoX83+ZPZ6Bg9XhuHBXVVXTsPcU=
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/ChameleonFramework</key>
 		<data>
-		BciuCpK1gSr1Lm1/iG560hGXcKU=
+		WTTYpSMUnmkBmk/h+47DEsFtK0o=
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/Info.plist</key>
 		<data>
@@ -515,7 +407,7 @@
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD</key>
 		<data>
-		ZAdXUyuwj9RvmWSXmwrkxODwZF4=
+		qSPfFXdvtE8Chx4DsSjyRK9e+JQ=
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
 		<data>
@@ -569,66 +461,6 @@
 		<data>
 		Tq+VYgwrNLu+qN93rSgj6KD7fkw=
 		</data>
-		<key>Geography.png</key>
-		<data>
-		DlX3L5MbR6fd12juEPGj+b3JP1g=
-		</data>
-		<key>Geography@2x.png</key>
-		<data>
-		rKZos0axm9nEjWGFegqMNJATaNs=
-		</data>
-		<key>Geography@3x.png</key>
-		<data>
-		ZJQfnbLeNfRx/jGvM7aB5mC5yZE=
-		</data>
-		<key>Gift.png</key>
-		<data>
-		k9D6nEQSPcr+jc67wlmzUGdNleI=
-		</data>
-		<key>Gift@2x.png</key>
-		<data>
-		m1XqXJLRuwW1eRnYu9GZLj6QKh0=
-		</data>
-		<key>Gift@3x.png</key>
-		<data>
-		oMTqJVP8aEFvafB5o3aT3BFYJSk=
-		</data>
-		<key>GoodQuality.png</key>
-		<data>
-		J0e3/F+S34lUdMBI3cC/5AkDEu8=
-		</data>
-		<key>GoodQuality@2x.png</key>
-		<data>
-		p6smw5QAByed7Lc/0X5+AE8KF10=
-		</data>
-		<key>GoodQuality@3x.png</key>
-		<data>
-		itDl2ms1hd3HGCWxrrKpSvZLFoA=
-		</data>
-		<key>Icons8Logo.png</key>
-		<data>
-		2nhdTXOf6FHvByObeChcWIR3an8=
-		</data>
-		<key>Icons8Logo@2x.png</key>
-		<data>
-		55lrx5LVzWXXK6Sys3n5/2jor8c=
-		</data>
-		<key>Icons8Logo@3x.png</key>
-		<data>
-		wvwjVUI8zehW4RBfG/1CYs3tiyU=
-		</data>
-		<key>Ladybird.png</key>
-		<data>
-		sFpx+X6VIx5FnykO82aQ6yGzhOY=
-		</data>
-		<key>Ladybird@2x.png</key>
-		<data>
-		ozHCuxsnjZfDbKEVYtSQhSNQfmw=
-		</data>
-		<key>Ladybird@3x.png</key>
-		<data>
-		dSSBA2GQuDeP7vHwvTcNJHR5wgE=
-		</data>
 		<key>Like.png</key>
 		<data>
 		jatKbt8/11n2NkG7dHuEnMtMwXw=
@@ -640,18 +472,6 @@
 		<key>Like@3x.png</key>
 		<data>
 		DJEohSjrnuo/m4Ox9n4GpRlvLKo=
-		</data>
-		<key>Link.png</key>
-		<data>
-		+eA/xCA+7UTkNJZFfWrI9L7zcnA=
-		</data>
-		<key>Link@2x.png</key>
-		<data>
-		J9W+wo53+cTPuvXBkn1PUs40zy0=
-		</data>
-		<key>Link@3x.png</key>
-		<data>
-		ctGQ0m24MoFkpCnmoMiUesgeImA=
 		</data>
 		<key>Lock.png</key>
 		<data>
@@ -668,18 +488,6 @@
 		<key>Pods-acknowledgements.plist</key>
 		<data>
 		yq6x4MfSR1QCy5xW4X+xyKJZeKc=
-		</data>
-		<key>Shield.png</key>
-		<data>
-		z5tgxvBXvqLcxIkvo3EcIOFF2F8=
-		</data>
-		<key>Shield@2x.png</key>
-		<data>
-		gY1O3W56iG/0xf//02t2F94wuRU=
-		</data>
-		<key>Shield@3x.png</key>
-		<data>
-		aDxWwgENrBNkRd5NuPLFbKYsnDY=
 		</data>
 		<key>ShoppingCart.png</key>
 		<data>
@@ -716,30 +524,6 @@
 		<key>Talk@3x.png</key>
 		<data>
 		0iIXtaLU7Bgc1o0L/z+0/YgxKS8=
-		</data>
-		<key>ThumbUp.png</key>
-		<data>
-		SHkcdyXRUrw+qQVMppHBHwwUNXc=
-		</data>
-		<key>ThumbUp@2x.png</key>
-		<data>
-		Xk51Il2wa+T/WK7oujUCLhLVz28=
-		</data>
-		<key>ThumbUp@3x.png</key>
-		<data>
-		t4kfXDUopfRNmKHpz14KQp9Kht4=
-		</data>
-		<key>ThumbsDown.png</key>
-		<data>
-		JdI7O8hRkaTTzZY+zOZ1KShPDhA=
-		</data>
-		<key>ThumbsDown@2x.png</key>
-		<data>
-		dXik8sx2gKmNrM0nRQxps5J6KUo=
-		</data>
-		<key>ThumbsDown@3x.png</key>
-		<data>
-		uyggsMQ76YaxJ7Uqqn9Do3q9L9w=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>

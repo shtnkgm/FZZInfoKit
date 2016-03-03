@@ -9,7 +9,7 @@
 #import "FZZInfoKit.h"
 
 #import "FZZInfoViewController.h"
-#import "NSString+Localized.h"
+#import "NSString+FZZInfoKitLocalized.h"
 
 @interface FZZInfoKit ()
 

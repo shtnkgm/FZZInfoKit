@@ -1,1 +1,1 @@
- const unsigned char ChameleonFrameworkVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:ChameleonFramework  PROJECT:Pods-1" "\n"; const double ChameleonFrameworkVersionNumber __attribute__ ((used)) = (double)1.;
+ const unsigned char ChameleonFrameworkVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:ChameleonFramework  PROJECT:Pods-2.1.0" "\n"; const double ChameleonFrameworkVersionNumber __attribute__ ((used)) = (double)2.1;

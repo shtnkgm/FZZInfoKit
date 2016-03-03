@@ -7,7 +7,7 @@
 //
 
 #import "FZZInfoViewModel.h"
-#import "NSString+Localized.h"
+#import "NSString+FZZInfoKitLocalized.h"
 #include <sys/types.h>
 #include <sys/sysctl.h>
 

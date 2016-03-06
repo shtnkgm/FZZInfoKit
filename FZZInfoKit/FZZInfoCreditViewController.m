@@ -7,6 +7,7 @@
 //
 
 #import "FZZInfoCreditViewController.h"
+#import "Chameleon.h"
 
 @interface FZZInfoCreditViewController ()
 
@@ -27,7 +28,9 @@
     self.textView.editable = NO;
     self.textView.selectable = YES;
     self.textView.dataDetectorTypes = UIDataDetectorTypeLink;
-    self.textView.font = [UIFont systemFontOfSize:10];
+    self.textView.font = [UIFont systemFontOfSize:8];
+    self.textView.backgroundColor = FlatBlack;
+    self.textView.textColor = FlatWhite;
     
     NSDictionary* mainBundleData;
     NSString *mainBundleFile = [[NSBundle mainBundle] pathForResource:@"Pods-acknowledgements" ofType:@"plist"];
@@ -60,16 +63,12 @@
     NSString *lisencesString = @"";
     
     for(NSString *key in [creditDictionary allKeys]){
-        lisencesString = [lisencesString stringByAppendingFormat:@"--- %@ ---",key];
-        lisencesString = [lisencesString stringByAppendingFormat:@"\n\n"];
-        lisencesString = [lisencesString stringByAppendingString:creditDictionary[key]];
-        lisencesString = [lisencesString stringByAppendingFormat:@"\n\n\n"];
+        lisencesString = [lisencesString stringByAppendingFormat:@"--- %@ ---\n\n",key];
+        lisencesString = [lisencesString stringByAppendingFormat:@"%@\n\n\n",creditDictionary[key]];
     }
     
-    lisencesString = [lisencesString stringByAppendingFormat:@"--- %@ ---",@"icons8"];
-    lisencesString = [lisencesString stringByAppendingFormat:@"\n\n"];
-    lisencesString = [lisencesString stringByAppendingString:@"https://icons8.com"];
-    lisencesString = [lisencesString stringByAppendingFormat:@"\n\n\n"];
+    lisencesString = [lisencesString stringByAppendingFormat:@"--- %@ ---\n\n",@"icons8"];
+    lisencesString = [lisencesString stringByAppendingFormat:@"https://icons8.com\n\n\n"];
     
     self.textView.text = lisencesString;
 }

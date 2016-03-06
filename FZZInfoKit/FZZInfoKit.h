@@ -15,11 +15,11 @@
 @interface FZZInfoKit : NSObject
 
 @property (nonatomic, weak) UIViewController <FZZInfoKitDelegate> *delegate;
-@property (nonatomic, strong) UIColor *keyColor;
 @property (nonatomic, assign) BOOL letIconRound;
 
 - (void)showInfoWithAppID:(NSString *)appID
                  iconName:(NSString *)iconName
+                  appName:(NSString *)appName
                  delegate:(UIViewController *)delegate
                  animated:(BOOL)animeted;
 

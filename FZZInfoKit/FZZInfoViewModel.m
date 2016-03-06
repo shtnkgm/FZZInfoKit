@@ -7,45 +7,59 @@
 //
 
 #import "FZZInfoViewModel.h"
+#import "FZZInfoKitUtility.h"
 #import "NSString+FZZInfoKitLocalized.h"
-#include <sys/types.h>
-#include <sys/sysctl.h>
 
 static NSString *const kName = @"name";
 static NSString *const kRows = @"rows";
 
+static NSString *const kDeveloperID = @"457011383";
+static NSString *const kSupportSiteURL = @"http://shtnkgm.github.io";
+static NSString *const kPrivacyPolicyURL = @"http://shtnkgm.github.io/privacy.html";
+static NSString *const kBugReportURL = @"https://docs.google.com/forms/d/1jAD7A1ch6D1SXbxf3hPzF15hicTbxKadaHf03axRbQk/viewform";
+static NSString *const kAppStoreBaseURL = @"https://itunes.apple.com/app";
+static NSString *const kReviewPageBaseURL = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews";
+static NSString *const kOtherAppsURL = @"itms-apps://itunes.com/apps/shotanakagami";
+static NSString *const kInfoFormID = @"entry_724500489";
+
 @interface FZZInfoViewModel ()
 
 @property (nonatomic, strong) NSMutableArray *data;
+@property (nonatomic, readonly) NSString *appID;
+@property (nonatomic, readonly) NSString *infoFormID;
+@property (nonatomic, readonly) NSString *supportSiteURL;
+@property (nonatomic, readonly) NSString *developerID;
+@property (nonatomic, readonly) NSString *bugReportURL;
+@property (nonatomic, readonly) NSString *bugReportURLWithOption;
+@property (nonatomic, readonly) NSString *privacyPolicyURL;
+@property (nonatomic, readonly) NSString *otherAppsURL;
+@property (nonatomic, readonly) NSString *appVersion;
 
 @end
 
 
 @implementation FZZInfoViewModel
 
-- (instancetype)initWithAppID:(NSString *)appID{
+- (instancetype)initWithAppID:(NSString *)appID appName:(NSString *)appName{
     self = [super init];
     if (self) {
         _data = [NSMutableArray array];
         
         _appID = appID;
-        _appName = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleName"];
-        _appVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
-        _developerID = @"457011383";
-        _supportSiteURL = @"http://shtnkgm.github.io";
-        _bugReportURL = @"https://docs.google.com/forms/d/1jAD7A1ch6D1SXbxf3hPzF15hicTbxKadaHf03axRbQk/viewform";
-        _privacyPolicyURL = @"http://shtnkgm.github.io/privacy.html";
-        _appstoreURL = [NSString stringWithFormat:@"https://itunes.apple.com/app/id%@",_appID];
-        _reviewPageURL = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",_appID];
-        _otherAppsURL = @"itms-apps://itunes.com/apps/shotanakagami";
+        _appName = appName;
+        _appVersion = [FZZInfoKitUtility appVersion];
+        _developerID = kDeveloperID;
+        _supportSiteURL = kSupportSiteURL;
+        _bugReportURL = kBugReportURL;
+        _privacyPolicyURL = kPrivacyPolicyURL;
+        _appstoreURL = [NSString stringWithFormat:@"%@/id%@",kAppStoreBaseURL,_appID];
+        _reviewPageURL = [NSString stringWithFormat:@"%@?type=Purple+Software&id=%@",kReviewPageBaseURL,_appID];
+        _otherAppsURL = kOtherAppsURL;
+        _infoFormID = kInfoFormID;
         
-        _infoFormID = @"entry_724500489";
-        _iOSVersion = [[UIDevice currentDevice] systemVersion];
-        
-        NSString *option = [[NSString stringWithFormat:@"・%@(Ver.%@)\n・%@(iOS%@)",_appName,_appVersion,[self platform],_iOSVersion] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        //URLエンコード
-        
-        _bugReportURLWithOption = [NSString stringWithFormat:@"%@?%@=%@",_bugReportURL,_infoFormID,option];
+        NSString *option = [NSString stringWithFormat:@"・%@(Ver.%@)\n・%@(iOS%@)",_appName,_appVersion,[FZZInfoKitUtility platform],[FZZInfoKitUtility iosVersion]];
+        NSString *encordedOption = [option stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        _bugReportURLWithOption = [NSString stringWithFormat:@"%@?%@=%@",_bugReportURL,_infoFormID,encordedOption];
         
         [self setSupportDictionary];
         [self setDeveloperDictionary];
@@ -139,16 +153,6 @@ static NSString *const kRows = @"rows";
                     value:nil
                       url:_privacyPolicyURL
                      file:@"Lock"];
-}
-
-- (NSString *)platform{
-    size_t size;
-    sysctlbyname("hw.machine", NULL, &size, NULL, 0);
-    char *machine = malloc(size);
-    sysctlbyname("hw.machine", machine, &size, NULL, 0);
-    NSString *platform = [NSString stringWithCString:machine encoding:NSUTF8StringEncoding];
-    free(machine);
-    return platform;
 }
 
 - (NSString *)sectionNameWithSection:(NSInteger)section{

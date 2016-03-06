@@ -7,19 +7,30 @@
 //
 
 #import "FZZInfoCell.h"
+#import "Chameleon.h"
 
 @implementation FZZInfoCell
 
 - (void)awakeFromNib {    
-    self.rightLabel.font = [UIFont systemFontOfSize:16.0];
-    self.leftLabel.font = [UIFont systemFontOfSize:16.0];
+    self.rightLabel.font = [UIFont systemFontOfSize:15.0];
+    self.leftLabel.font = [UIFont systemFontOfSize:15.0];
     
-    self.rightLabel.textColor = [UIColor blackColor];
-    self.leftLabel.textColor = [UIColor blackColor];
+    self.rightLabel.textColor = FlatWhite;
+    self.leftLabel.textColor = FlatWhite;
+    self.backgroundColor = FlatBlack;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
+
+-(void) setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+    if (highlighted){
+        self.backgroundColor = FlatBlackDark;
+    }else{
+        self.backgroundColor = FlatBlack;
+    }
 }
 
 @end

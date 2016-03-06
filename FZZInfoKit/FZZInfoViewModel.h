@@ -15,21 +15,11 @@ static NSString *const FZZInfoViewModelCreditUrl = @"creditUrl";
 
 @interface FZZInfoViewModel : NSObject
 
-@property (nonatomic, copy) NSString *appID;
-@property (nonatomic, copy) NSString *appName;
-@property (nonatomic, copy) NSString *supportSiteURL;
-@property (nonatomic, copy) NSString *developerID;
-@property (nonatomic, copy) NSString *bugReportURL;
-@property (nonatomic, copy) NSString *bugReportURLWithOption;
-@property (nonatomic, copy) NSString *privacyPolicyURL;
-@property (nonatomic, copy) NSString *appstoreURL;
-@property (nonatomic, copy) NSString *reviewPageURL;
-@property (nonatomic, copy) NSString *otherAppsURL;
-@property (nonatomic, copy) NSString *appVersion;
-@property (nonatomic, copy) NSString *iOSVersion;
-@property (nonatomic, copy) NSString *infoFormID;
+@property (nonatomic, readonly) NSString *appName;
+@property (nonatomic, readonly) NSString *appstoreURL;
+@property (nonatomic, readonly) NSString *reviewPageURL;
 
-- (instancetype)initWithAppID:(NSString *)appID;
+- (instancetype)initWithAppID:(NSString *)appID appName:(NSString *)appName;
 
 - (NSInteger)numberOfSections;
 - (NSInteger)numberOfRowsinSection:(NSInteger)section;

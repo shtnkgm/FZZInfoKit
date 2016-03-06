@@ -8,10 +8,6 @@
 
 "Network Error" = "通信エラー";
 
-//ナビゲーションタイトル
-"Info" = "情報";
-"Close" = "閉じる";
-
 //セクション名
 "User Feedback" = "フィードバック";
 "Creater" = "開発者";
@@ -29,3 +25,5 @@
 //情報名
 "AppName" = "アプリ名";
 "Version" = "バージョン";
+
+"Download on the AppStore" = "AppStoreからダウンロード";

@@ -11,6 +11,8 @@
 #import "FZZInfoCreditViewController.h"
 #import "FZZInfoViewModel.h"
 #import "FZZInfoViewModelEntity.h"
+#import "FZZInfoKitUtility.h"
+#import "NSString+FZZInfoKitLocalized.h"
 
 //オープンソースライブラリ
 #import "SVProgressHUD.h"
@@ -44,7 +46,7 @@ UINavigationControllerDelegate>
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.model = [[FZZInfoViewModel alloc] initWithAppID:_appID];
+    self.model = [[FZZInfoViewModel alloc] initWithAppID:_appID appName:_appName];
 
     [SVProgressHUD setForegroundColor:_keyColor];
     
@@ -53,6 +55,9 @@ UINavigationControllerDelegate>
     [self.tableView registerNib:nib forCellReuseIdentifier:@"InfoCell"];
     
     self.tableView.contentInset = UIEdgeInsetsMake(190, 0, 0, 0);
+    self.tableView.backgroundColor = [UIColor colorWithWhite:0.07 alpha:1];
+    self.tableView.separatorColor = [UIColor blackColor];
+    self.tableView.showsVerticalScrollIndicator = NO;
     
     [self addHeaderView];
     
@@ -62,15 +67,40 @@ UINavigationControllerDelegate>
     [self.tableView reloadData];
 }
 
+- (void)viewDidLayoutSubviews{
+    self.iconView.frame = CGRectMake(0,-190,self.tableView.frame.size.width,180);
+    self.icon.frame = CGRectMake(self.iconView.frame.size.width/2.0-40,self.iconView.frame.size.height/2.0-40-20, 80, 80);
+    self.titleLabel.frame = CGRectMake(0,self.icon.frame.size.height+self.icon.frame.origin.y+12,self.tableView.frame.size.width,28);
+    self.detailLabel.frame = CGRectMake(0,self.titleLabel.frame.origin.y+self.titleLabel.frame.size.height+2,self.tableView.frame.size.width,15);
+    
+    self.iconView.backgroundColor = [UIColor colorWithGradientStyle:UIGradientStyleTopToBottom
+                                                          withFrame:_iconView.frame
+                                                          andColors:@[[UIColor colorWithRed:229/255.0
+                                                                                      green:228/255.0
+                                                                                       blue:226/255.0
+                                                                                      alpha:1],
+                                                                      [UIColor colorWithRed:216/255.0
+                                                                                      green:216/255.0
+                                                                                       blue:216/255.0
+                                                                                      alpha:1]]];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+# pragma mark HeaderView
+
 - (void)addHeaderView{
     self.iconView = [UIView new];
-    self.iconView.backgroundColor = FlatNavyBlueDark;
-    [self.tableView addSubview:self.iconView];
     
+    [self.tableView addSubview:self.iconView];
     self.icon = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.icon setImage:[self imageNamedWithoutCache:_iconName] forState:UIControlStateNormal];
+    
+    [self.icon setImage:[FZZInfoKitUtility imageNamedWithoutCache:_iconName] forState:UIControlStateNormal];
     [self.icon addTarget:self action:@selector(iconTapped:) forControlEvents:UIControlEventTouchUpInside];
-    self.icon.layer.shadowOpacity = 0.3;
+    self.icon.layer.shadowOpacity = 0.6;
+    self.icon.layer.shadowRadius = 2;
     self.icon.layer.shadowColor = [UIColor blackColor].CGColor;
     self.icon.layer.shadowOffset = CGSizeMake(0, 2);
     
@@ -83,37 +113,48 @@ UINavigationControllerDelegate>
     [self.iconView addSubview:self.icon];
     
     self.titleLabel = [UILabel new];
-    self.titleLabel.text = [NSString stringWithFormat:@"%@",_model.appName];
-    self.titleLabel.font = [UIFont fontWithName:@"Avenir-BookOblique" size:20];
-    self.titleLabel.textColor = [UIColor whiteColor];
+    
+    NSMutableAttributedString *titleText = [NSMutableAttributedString new];
+    
+    for (int i = 0 ; i < [_model.appName length] ; i++) {
+        unichar c = [_model.appName characterAtIndex:i];
+        
+        NSString *character = [_model.appName substringWithRange:NSMakeRange(i, 1)];
+        
+        if(isupper(c)){
+            NSDictionary *cAttributes = @{ NSForegroundColorAttributeName :FlatBlackDark,
+                                                NSFontAttributeName : [UIFont fontWithName:@"Futura-Medium" size:14],
+                                                NSKernAttributeName : @8.0f};
+            NSAttributedString *titleC = [[NSAttributedString alloc] initWithString:character
+                                                                            attributes:cAttributes];
+            [titleText appendAttributedString:titleC];
+            
+        }else{
+            NSDictionary *cAttributes = @{ NSForegroundColorAttributeName : FlatBlack,
+                                           NSFontAttributeName : [UIFont fontWithName:@"Futura-Medium" size:14],
+                                           NSKernAttributeName : @8.0f};
+            NSAttributedString *titleC = [[NSAttributedString alloc] initWithString:character
+                                                                         attributes:cAttributes];
+            [titleText appendAttributedString:titleC];
+        }
+        
+    }
+    
+    self.titleLabel.attributedText = titleText;
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.iconView addSubview:self.titleLabel];
     
     self.detailLabel = [UILabel new];
-    self.detailLabel.text = [NSString stringWithFormat:@"\u00A9 SHOTA NAKAGAMI"];
+    
+    self.detailLabel.text = [NSString stringWithFormat:@"Designed by Shota Nakagami"];
     self.detailLabel.font = [UIFont fontWithName:@"Avenir-Book" size:10];
-    self.detailLabel.textColor = [UIColor lightGrayColor];
+    self.detailLabel.textColor = FlatGrayDark;
     self.detailLabel.textAlignment = NSTextAlignmentCenter;
     [self.iconView addSubview:self.detailLabel];
 }
 
 - (void)iconTapped:(UIButton *)sender{
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_model.reviewPageURL]];
-}
-
-- (void)viewDidLayoutSubviews{
-    self.iconView.frame = CGRectMake(0,-190,self.tableView.frame.size.width,180);
-    self.icon.frame = CGRectMake(self.iconView.frame.size.width/2.0-40,self.iconView.frame.size.height/2.0-40-20, 80, 80);
-    self.titleLabel.frame = CGRectMake(0,self.icon.frame.size.height+self.icon.frame.origin.y+12,self.tableView.frame.size.width,20);
-    self.detailLabel.frame = CGRectMake(0,self.titleLabel.frame.origin.y+self.titleLabel.frame.size.height+2,self.tableView.frame.size.width,15);
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-- (void)dealloc{
-    
 }
 
 # pragma mark UITableViewDelegate
@@ -152,7 +193,6 @@ UINavigationControllerDelegate>
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 36)];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(16, 14, tableView.frame.size.width-16*2, 22)];
     label.text = [_model sectionNameWithSection:section];
-    
     [label setFont:[UIFont systemFontOfSize:15.0]];
     [label setTextColor:[UIColor grayColor]];
     [label setTextAlignment:NSTextAlignmentLeft];
@@ -177,16 +217,16 @@ UINavigationControllerDelegate>
     cell.rightLabel.text = entity.value;
     
     if(entity.file){
-        UIImage *image = [self imageNamedWithoutCache:entity.file];
+        UIImage *image = [FZZInfoKitUtility imageNamedWithoutCache:entity.file];
         image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-        cell.iconImageView.tintColor = _keyColor;
+        cell.iconImageView.tintColor = FlatWhiteDark;
         cell.iconImageView.image = image;
     }else{
         cell.iconImageView.image = nil;
     }
     
     if(entity.url){
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }else{
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -195,15 +235,10 @@ UINavigationControllerDelegate>
     return cell;
 }
 
-- (UIImage *)imageNamedWithoutCache:(NSString *)name{
-    NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
-    NSString *imagePath = [bundlePath stringByAppendingPathComponent:name];
-    UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
-    return image;
-}
+# pragma mark ActivityViewController
 
 - (void)useActivityViewController{
-    NSString *shareText = [NSString stringWithFormat:@"%@\n%@",_model.appName,_model.appstoreURL];
+    NSString *shareText = [NSString stringWithFormat:@"%@\n\n%@\n%@",_model.appName,[@"Download on the AppStore" localized],_model.appstoreURL];
     NSArray *activityItems = @[shareText];
     
     //非表示にするアクティビティ
@@ -226,7 +261,9 @@ UINavigationControllerDelegate>
         }
     };
     
-    [self presentViewController:activityViewController animated:YES completion:nil];
+    [self presentViewController:activityViewController animated:YES completion:^{
+        //何もしない
+    }];
 }
 
 @end

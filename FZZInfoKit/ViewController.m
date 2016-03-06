@@ -38,7 +38,8 @@
     self.infoKit = [FZZInfoKit new];
     self.infoKit.letIconRound = YES;
     [self.infoKit showInfoWithAppID:@"480099135"
-                           iconName:@"fzzicon"
+                           iconName:@"icon350x350"
+                            appName:@"Roundgraphy"
                            delegate:self
                            animated:YES];
     

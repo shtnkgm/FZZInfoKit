@@ -70,6 +70,18 @@
 		<data>
 		8Onk0vjlawxhdBmNUCw2iKSRf6o=
 		</data>
+		<key>Delete.png</key>
+		<data>
+		yYZashob2+dB5QoZgB/FSPO9oeg=
+		</data>
+		<key>Delete3x.png</key>
+		<data>
+		Cc8Q5CJgzrw6gBWtksLroLp/wNY=
+		</data>
+		<key>Delete@2x.png</key>
+		<data>
+		Ylkgyx2Zx7f8h0vmtsKHjJMTRYo=
+		</data>
 		<key>Document.png</key>
 		<data>
 		i9AkWohPYvUscdWGiV/bkE/lN+k=
@@ -108,7 +120,7 @@
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/ChameleonFramework</key>
 		<data>
-		WTTYpSMUnmkBmk/h+47DEsFtK0o=
+		WVh/ULn3TjSah/y/RibSnMOI0tg=
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/Info.plist</key>
 		<data>
@@ -124,7 +136,7 @@
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD</key>
 		<data>
-		qSPfFXdvtE8Chx4DsSjyRK9e+JQ=
+		d8JGbk67HhJ7sD/lMptBmXWpdMc=
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
 		<data>
@@ -180,7 +192,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		G2BmZhZUAfcgZrWHUBBdsyJGIyg=
+		sv+IyrjCm/xYbTqmHAAgOWik6RU=
 		</data>
 		<key>Like.png</key>
 		<data>
@@ -275,11 +287,15 @@
 		<data>
 		QneOVpchQxJntpihVBGk/6TUuzI=
 		</data>
+		<key>icon350x350.png</key>
+		<data>
+		59YQCtTtOkw4NxQa0LgV3jR2npg=
+		</data>
 		<key>ja.lproj/FZZInfoKitLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9tJgmiCuCsi/jhRim2Qv4vr+cqE=
+			8g7KM+ngHlRG4eYyemW5CTcr+Jc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -353,6 +369,18 @@
 		<data>
 		8Onk0vjlawxhdBmNUCw2iKSRf6o=
 		</data>
+		<key>Delete.png</key>
+		<data>
+		yYZashob2+dB5QoZgB/FSPO9oeg=
+		</data>
+		<key>Delete3x.png</key>
+		<data>
+		Cc8Q5CJgzrw6gBWtksLroLp/wNY=
+		</data>
+		<key>Delete@2x.png</key>
+		<data>
+		Ylkgyx2Zx7f8h0vmtsKHjJMTRYo=
+		</data>
 		<key>Document.png</key>
 		<data>
 		i9AkWohPYvUscdWGiV/bkE/lN+k=
@@ -391,7 +419,7 @@
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/ChameleonFramework</key>
 		<data>
-		WTTYpSMUnmkBmk/h+47DEsFtK0o=
+		WVh/ULn3TjSah/y/RibSnMOI0tg=
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/Info.plist</key>
 		<data>
@@ -407,7 +435,7 @@
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD</key>
 		<data>
-		qSPfFXdvtE8Chx4DsSjyRK9e+JQ=
+		d8JGbk67HhJ7sD/lMptBmXWpdMc=
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
 		<data>
@@ -550,11 +578,15 @@
 		<data>
 		QneOVpchQxJntpihVBGk/6TUuzI=
 		</data>
+		<key>icon350x350.png</key>
+		<data>
+		59YQCtTtOkw4NxQa0LgV3jR2npg=
+		</data>
 		<key>ja.lproj/FZZInfoKitLocalizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9tJgmiCuCsi/jhRim2Qv4vr+cqE=
+			8g7KM+ngHlRG4eYyemW5CTcr+Jc=
 			</data>
 			<key>optional</key>
 			<true/>

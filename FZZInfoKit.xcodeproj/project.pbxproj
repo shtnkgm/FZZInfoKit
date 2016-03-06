@@ -30,6 +30,11 @@
 		C326235E1C75F538006B089A /* Briefcase.png in Resources */ = {isa = PBXBuildFile; fileRef = C326235B1C75F538006B089A /* Briefcase.png */; };
 		C326235F1C75F538006B089A /* Briefcase@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C326235C1C75F538006B089A /* Briefcase@2x.png */; };
 		C32623601C75F538006B089A /* Briefcase-78.png in Resources */ = {isa = PBXBuildFile; fileRef = C326235D1C75F538006B089A /* Briefcase-78.png */; };
+		C36069A41C8B5E5D0046D78D /* Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = C36069A11C8B5E5D0046D78D /* Delete.png */; };
+		C36069A51C8B5E5D0046D78D /* Delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C36069A21C8B5E5D0046D78D /* Delete@2x.png */; };
+		C36069A61C8B5E5D0046D78D /* Delete3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C36069A31C8B5E5D0046D78D /* Delete3x.png */; };
+		C36069A81C8B64B90046D78D /* icon350x350.png in Resources */ = {isa = PBXBuildFile; fileRef = C36069A71C8B64B90046D78D /* icon350x350.png */; };
+		C36069AB1C8C4ED10046D78D /* FZZInfoKitUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C36069AA1C8C4ED10046D78D /* FZZInfoKitUtility.m */; };
 		C37DBD6F1C7957870016DF09 /* FZZInfoKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C37DBD6E1C7957870016DF09 /* FZZInfoKit.m */; };
 		C37DBD731C7967E10016DF09 /* Tag.png in Resources */ = {isa = PBXBuildFile; fileRef = C37DBD701C7967E10016DF09 /* Tag.png */; };
 		C37DBD741C7967E10016DF09 /* Tag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C37DBD711C7967E10016DF09 /* Tag@2x.png */; };
@@ -83,6 +88,12 @@
 		C326235B1C75F538006B089A /* Briefcase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Briefcase.png; sourceTree = "<group>"; };
 		C326235C1C75F538006B089A /* Briefcase@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Briefcase@2x.png"; sourceTree = "<group>"; };
 		C326235D1C75F538006B089A /* Briefcase-78.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Briefcase-78.png"; sourceTree = "<group>"; };
+		C36069A11C8B5E5D0046D78D /* Delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delete.png; sourceTree = "<group>"; };
+		C36069A21C8B5E5D0046D78D /* Delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete@2x.png"; sourceTree = "<group>"; };
+		C36069A31C8B5E5D0046D78D /* Delete3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delete3x.png; sourceTree = "<group>"; };
+		C36069A71C8B64B90046D78D /* icon350x350.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon350x350.png; sourceTree = "<group>"; };
+		C36069A91C8C4ED10046D78D /* FZZInfoKitUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZZInfoKitUtility.h; sourceTree = "<group>"; };
+		C36069AA1C8C4ED10046D78D /* FZZInfoKitUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZZInfoKitUtility.m; sourceTree = "<group>"; };
 		C37DBD6D1C7957870016DF09 /* FZZInfoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZZInfoKit.h; sourceTree = "<group>"; };
 		C37DBD6E1C7957870016DF09 /* FZZInfoKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZZInfoKit.m; sourceTree = "<group>"; };
 		C37DBD701C7967E10016DF09 /* Tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tag.png; sourceTree = "<group>"; };
@@ -150,6 +161,10 @@
 		C32622AE1C70B970006B089A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C36069A71C8B64B90046D78D /* icon350x350.png */,
+				C36069A11C8B5E5D0046D78D /* Delete.png */,
+				C36069A21C8B5E5D0046D78D /* Delete@2x.png */,
+				C36069A31C8B5E5D0046D78D /* Delete3x.png */,
 				C39D4E8A1C7F19EC004A4A6B /* fzzicon.png */,
 				C39D4E8B1C7F19EC004A4A6B /* fzzicon@2x.png */,
 				C39D4E8C1C7F19EC004A4A6B /* fzzicon@3x.png */,
@@ -229,6 +244,8 @@
 		C3A2C6181C5F4B3C00FE057B /* FZZInfoKit */ = {
 			isa = PBXGroup;
 			children = (
+				C36069A91C8C4ED10046D78D /* FZZInfoKitUtility.h */,
+				C36069AA1C8C4ED10046D78D /* FZZInfoKitUtility.m */,
 				C37DBD771C79E8A80016DF09 /* NSString+FZZInfoKitLocalized.h */,
 				C37DBD781C79E8A80016DF09 /* NSString+FZZInfoKitLocalized.m */,
 				C37DBD6D1C7957870016DF09 /* FZZInfoKit.h */,
@@ -321,7 +338,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32622FE1C71F0CE006B089A /* Lock.png in Resources */,
+				C36069A61C8B5E5D0046D78D /* Delete3x.png in Resources */,
 				C32623351C74F3AA006B089A /* ShoppingCart@3x.png in Resources */,
+				C36069A81C8B64B90046D78D /* icon350x350.png in Resources */,
 				C32623021C720D69006B089A /* Talk@2x.png in Resources */,
 				C326234A1C74FE7C006B089A /* FZZInfoCreditViewController.xib in Resources */,
 				C32623601C75F538006B089A /* Briefcase-78.png in Resources */,
@@ -332,10 +351,12 @@
 				C32623041C720D69006B089A /* Talk.png in Resources */,
 				C326234F1C74FFA3006B089A /* Document@3x.png in Resources */,
 				C326232E1C74F2D8006B089A /* Error@2x.png in Resources */,
+				C36069A41C8B5E5D0046D78D /* Delete.png in Resources */,
 				C32622FC1C71F0CE006B089A /* Lock@2x.png in Resources */,
 				C32622FD1C71F0CE006B089A /* Lock@3x.png in Resources */,
 				C32622F01C71E866006B089A /* Like.png in Resources */,
 				C3A2C6261C5F4B3C00FE057B /* Assets.xcassets in Resources */,
+				C36069A51C8B5E5D0046D78D /* Delete@2x.png in Resources */,
 				C326232F1C74F2D8006B089A /* Error.png in Resources */,
 				C3A2C68B1C6A1EF200FE057B /* FZZInfoCell.xib in Resources */,
 				C326232D1C74F2D8006B089A /* Error@3x.png in Resources */,
@@ -419,6 +440,7 @@
 				C3A2C6211C5F4B3C00FE057B /* ViewController.m in Sources */,
 				C38C43F01C8472A30013D3B2 /* FZZInfoViewModel.m in Sources */,
 				C3A2C61E1C5F4B3C00FE057B /* AppDelegate.m in Sources */,
+				C36069AB1C8C4ED10046D78D /* FZZInfoKitUtility.m in Sources */,
 				C3A2C6371C5F4B5600FE057B /* FZZInfoCell.m in Sources */,
 				C37DBD6F1C7957870016DF09 /* FZZInfoKit.m in Sources */,
 				C3A2C61B1C5F4B3C00FE057B /* main.m in Sources */,

@@ -68,10 +68,6 @@
     [_delegate FZZInfoKitWillClose];
 }
 
-- (void)viewWillClose{
-    [_delegate FZZInfoKitWillClose];
-}
-
 - (UIImage *)imageNamedWithoutCache:(NSString *)name{
     NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
     NSString *imagePath = [bundlePath stringByAppendingPathComponent:name];

@@ -1,6 +1,8 @@
 dependencies: \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/FZZInfoKit.m \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/FZZInfoKit.h \
+  /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/FZZInfoViewController.h \
+  /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/NSString+FZZInfoKitLocalized.h \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/Build/Products/Debug-iphoneos/ChameleonFramework.framework/Headers/Chameleon.h \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/Build/Products/Debug-iphoneos/ChameleonFramework.framework/Headers/Chameleon_.h \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/Build/Products/Debug-iphoneos/ChameleonFramework.framework/Headers/ChameleonConstants.h \
@@ -15,6 +17,4 @@ dependencies: \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/Build/Products/Debug-iphoneos/ChameleonFramework.framework/Headers/UIColor+ChameleonPrivate.h \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/Build/Products/Debug-iphoneos/ChameleonFramework.framework/Headers/UIImage+ChameleonPrivate.h \
   /Users/Administrator/Desktop/app/Library/FZZInfoKit/Build/Products/Debug-iphoneos/ChameleonFramework.framework/Headers/UIView+ChameleonPrivate.h \
-  /Users/Administrator/Desktop/app/Library/FZZInfoKit/Build/Products/Debug-iphoneos/ChameleonFramework.framework/Headers/UIAppearance+Swift.h \
-  /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/FZZInfoViewController.h \
-  /Users/Administrator/Desktop/app/Library/FZZInfoKit/FZZInfoKit/NSString+FZZInfoKitLocalized.h
+  /Users/Administrator/Desktop/app/Library/FZZInfoKit/Build/Products/Debug-iphoneos/ChameleonFramework.framework/Headers/UIAppearance+Swift.h

@@ -19,7 +19,7 @@
                  iconName:(NSString *)iconName
                   appName:(NSString *)appName
                  delegate:(UIViewController *)delegate
-                 animated:(BOOL)animeted;
+                 animated:(BOOL)animated;
 
 @end
 

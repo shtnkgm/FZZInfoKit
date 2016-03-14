@@ -14,7 +14,7 @@
 
 @interface FZZInfoKit ()
 
-@property (nonatomic, assign) BOOL animeted;
+@property (nonatomic, assign) BOOL animated;
 @property (nonatomic, strong) UINavigationController *navigationController;
 
 @end
@@ -31,12 +31,12 @@
                  iconName:(NSString *)iconName
                   appName:(NSString *)appName
                  delegate:(UIViewController *)delegate
-                 animated:(BOOL)animeted{
+                 animated:(BOOL)animated{
     
     __weak id weakDelegate = delegate;
     
     self.delegate = weakDelegate;
-    self.animeted = animeted;
+    self.animated = animated;
     
     FZZInfoViewController *viewController = [FZZInfoViewController new];
     viewController.appID = appID;
@@ -60,7 +60,7 @@
     
     
     [_delegate presentViewController:self.navigationController
-                            animated:animeted
+                            animated:animated
                           completion:nil];
 }
 

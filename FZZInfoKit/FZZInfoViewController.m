@@ -47,8 +47,6 @@ UINavigationControllerDelegate>
     [super viewDidLoad];
 
     self.model = [[FZZInfoViewModel alloc] initWithAppID:_appID appName:_appName];
-
-    [SVProgressHUD setForegroundColor:_keyColor];
     
     //TableViewセルの初期化
     UINib *nib = [UINib nibWithNibName:@"FZZInfoCell" bundle:nil];

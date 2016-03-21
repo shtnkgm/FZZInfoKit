@@ -6,12 +6,12 @@
 //  Copyright © 2016年 Shota Nakagami. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "FZZInfoViewModelEntity.h"
 
 static NSString *const FZZInfoViewModelFrinedUrl = @"friendUrl";
 static NSString *const FZZInfoViewModelCreditUrl = @"creditUrl";
+
+@class FZZInfoViewModelEntity;
 
 @interface FZZInfoViewModel : NSObject
 

@@ -7,6 +7,7 @@
 //
 
 #import "FZZInfoViewModel.h"
+#import "FZZInfoViewModelEntity.h"
 #import "FZZInfoKitUtility.h"
 #import "NSString+FZZInfoKitLocalized.h"
 
@@ -103,11 +104,13 @@ static NSString *const kInfoFormID = @"entry_724500489";
                     value:nil
                       url:_reviewPageURL
                      file:@"Like"];
+    
     [self addRowInSection:sectionIndex
                      name:@"Report a bug"
                     value:nil
                       url:_bugReportURLWithOption
                      file:@"Error"];
+    
     [self addRowInSection:sectionIndex
                      name:@"Tell a friend"
                     value:nil
@@ -125,6 +128,7 @@ static NSString *const kInfoFormID = @"entry_724500489";
                     value:nil
                       url:_otherAppsURL
                      file:@"ShoppingCart"];
+    
     [self addRowInSection:sectionIndex
                      name:@"Portfolio Site"
                     value:nil
@@ -143,11 +147,13 @@ static NSString *const kInfoFormID = @"entry_724500489";
                     value:_appVersion
                       url:nil
                      file:@"Tag"];
+    
     [self addRowInSection:sectionIndex
                      name:@"Open Source License"
                     value:nil
                       url:FZZInfoViewModelCreditUrl
                      file:@"Document"];
+    
     [self addRowInSection:sectionIndex
                      name:@"Privacy Policy"
                     value:nil

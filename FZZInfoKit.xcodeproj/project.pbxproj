@@ -43,9 +43,6 @@
 		C38C43F01C8472A30013D3B2 /* FZZInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C38C43EF1C8472A30013D3B2 /* FZZInfoViewModel.m */; };
 		C38C43F31C8479C80013D3B2 /* FZZInfoViewModelEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = C38C43F21C8479C80013D3B2 /* FZZInfoViewModelEntity.m */; };
 		C39D4E891C7F1937004A4A6B /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39D4E881C7F1937004A4A6B /* Pods-acknowledgements.plist */; };
-		C39D4E8D1C7F19EC004A4A6B /* fzzicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C39D4E8A1C7F19EC004A4A6B /* fzzicon.png */; };
-		C39D4E8E1C7F19EC004A4A6B /* fzzicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39D4E8B1C7F19EC004A4A6B /* fzzicon@2x.png */; };
-		C39D4E8F1C7F19EC004A4A6B /* fzzicon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39D4E8C1C7F19EC004A4A6B /* fzzicon@3x.png */; };
 		C3A2C61B1C5F4B3C00FE057B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2C61A1C5F4B3C00FE057B /* main.m */; };
 		C3A2C61E1C5F4B3C00FE057B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2C61D1C5F4B3C00FE057B /* AppDelegate.m */; };
 		C3A2C6211C5F4B3C00FE057B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2C6201C5F4B3C00FE057B /* ViewController.m */; };
@@ -106,9 +103,6 @@
 		C38C43F11C8479C80013D3B2 /* FZZInfoViewModelEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZZInfoViewModelEntity.h; sourceTree = "<group>"; };
 		C38C43F21C8479C80013D3B2 /* FZZInfoViewModelEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZZInfoViewModelEntity.m; sourceTree = "<group>"; };
 		C39D4E881C7F1937004A4A6B /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		C39D4E8A1C7F19EC004A4A6B /* fzzicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fzzicon.png; sourceTree = "<group>"; };
-		C39D4E8B1C7F19EC004A4A6B /* fzzicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fzzicon@2x.png"; sourceTree = "<group>"; };
-		C39D4E8C1C7F19EC004A4A6B /* fzzicon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fzzicon@3x.png"; sourceTree = "<group>"; };
 		C3A2C6161C5F4B3C00FE057B /* FZZInfoKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FZZInfoKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A2C61A1C5F4B3C00FE057B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3A2C61C1C5F4B3C00FE057B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -165,9 +159,6 @@
 				C36069A11C8B5E5D0046D78D /* Delete.png */,
 				C36069A21C8B5E5D0046D78D /* Delete@2x.png */,
 				C36069A31C8B5E5D0046D78D /* Delete3x.png */,
-				C39D4E8A1C7F19EC004A4A6B /* fzzicon.png */,
-				C39D4E8B1C7F19EC004A4A6B /* fzzicon@2x.png */,
-				C39D4E8C1C7F19EC004A4A6B /* fzzicon@3x.png */,
 				C37DBD701C7967E10016DF09 /* Tag.png */,
 				C37DBD711C7967E10016DF09 /* Tag@2x.png */,
 				C37DBD721C7967E10016DF09 /* Tag@3x.png */,
@@ -344,7 +335,6 @@
 				C32623021C720D69006B089A /* Talk@2x.png in Resources */,
 				C326234A1C74FE7C006B089A /* FZZInfoCreditViewController.xib in Resources */,
 				C32623601C75F538006B089A /* Briefcase-78.png in Resources */,
-				C39D4E8F1C7F19EC004A4A6B /* fzzicon@3x.png in Resources */,
 				C32623501C74FFA3006B089A /* Document.png in Resources */,
 				C326235F1C75F538006B089A /* Briefcase@2x.png in Resources */,
 				C3A2C6291C5F4B3C00FE057B /* LaunchScreen.storyboard in Resources */,
@@ -366,12 +356,10 @@
 				C32623341C74F3AA006B089A /* ShoppingCart@2x.png in Resources */,
 				C326235E1C75F538006B089A /* Briefcase.png in Resources */,
 				C32622F21C71E866006B089A /* Like@3x.png in Resources */,
-				C39D4E8D1C7F19EC004A4A6B /* fzzicon.png in Resources */,
 				C326234E1C74FFA3006B089A /* Document@2x.png in Resources */,
 				C37DBD751C7967E10016DF09 /* Tag@3x.png in Resources */,
 				C3A2C6241C5F4B3C00FE057B /* Main.storyboard in Resources */,
 				C37DBD741C7967E10016DF09 /* Tag@2x.png in Resources */,
-				C39D4E8E1C7F19EC004A4A6B /* fzzicon@2x.png in Resources */,
 				C3A2C68D1C6A1EF700FE057B /* FZZInfoViewController.xib in Resources */,
 				C32623031C720D69006B089A /* Talk@3x.png in Resources */,
 				C32623331C74F3AA006B089A /* ShoppingCart.png in Resources */,
@@ -517,7 +505,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;

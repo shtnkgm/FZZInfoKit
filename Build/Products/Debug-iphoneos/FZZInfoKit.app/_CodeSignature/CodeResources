@@ -8,7 +8,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OUBvky+Q+rwt/bmDYLB1nMQgbM8=
+			hO0jh7OasPb+1zL9l1E95rIOXnc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -26,7 +26,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			x2LN+wWuALO+tSPxpsyxaocAo/w=
+			3huVfsw0emzzY1rBHSYO9Cz031o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -35,7 +35,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NITo8REIeLJFuyI5wSEyssoKL5o=
+			SowI2ypq/+DZmqwT0pAjT405gdU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -53,7 +53,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LQ6SJoLaULyDuCF7JbZzyej/iMM=
+			hD8Aaz73uXJuQ4bLoeCSg7KiRNI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -108,35 +108,35 @@
 		</data>
 		<key>FZZInfoCell.nib</key>
 		<data>
-		ay5S0aq5p/k5V9/ZdNnhWUHpSLw=
+		so+1naeD+mbI8B5mFi7F7W7iQWE=
 		</data>
 		<key>FZZInfoCreditViewController.nib</key>
 		<data>
-		6QeBPIfpg32NHMsMwHA8qZs0S3Y=
+		XU6ahHzmyYkIoYNq77wH/Dj/m2I=
 		</data>
 		<key>FZZInfoViewController.nib</key>
 		<data>
-		GoX83+ZPZ6Bg9XhuHBXVVXTsPcU=
+		lARY+i1hweZ+P5bhonDBsG+cfJo=
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/ChameleonFramework</key>
 		<data>
-		y9iSVLceSqll0H5AkqZ6nKC+0jY=
+		4F16Qap/gCn4mSpLMWz8AmBYlws=
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/Info.plist</key>
 		<data>
-		7m5fDhXYk1S/kbiW4b91jHNx7qM=
+		drHd55TB5mzG7lyoiqoK88EMzf0=
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
-		ru49lLdK+Ggpk2iBqisl80HCOhE=
+		zLKDVF5sxTVannW3LuTr4ophvig=
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/Info.plist</key>
 		<data>
-		vTkvM5qW2Oekq0r7dIIsVYGUZvQ=
+		z2trRTFo9a4q65QBWS1BSvT7PFE=
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD</key>
 		<data>
-		qTFloQ55WkOD/cidxT2BQSvIAxc=
+		OKNy+qxXaGVH033S3SKKQhkIUgY=
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
 		<data>
@@ -188,11 +188,11 @@
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources</key>
 		<data>
-		/ALh0Jga0JwIU4oJgNeYVf1pBnY=
+		JaVpoLJeVjzCag4KmGd7MVBhVZA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		sv+IyrjCm/xYbTqmHAAgOWik6RU=
+		WV+OXmFgNRCKtuVKIJ60xJVsoXY=
 		</data>
 		<key>Like.png</key>
 		<data>
@@ -275,18 +275,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>fzzicon.png</key>
-		<data>
-		rRWmXe8ouIlm+4kyLGXtRq5FhNo=
-		</data>
-		<key>fzzicon@2x.png</key>
-		<data>
-		8wNJXUpzlo7Zfclmp104sJFw2KI=
-		</data>
-		<key>fzzicon@3x.png</key>
-		<data>
-		QneOVpchQxJntpihVBGk/6TUuzI=
-		</data>
 		<key>icon350x350.png</key>
 		<data>
 		59YQCtTtOkw4NxQa0LgV3jR2npg=
@@ -307,7 +295,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OUBvky+Q+rwt/bmDYLB1nMQgbM8=
+			hO0jh7OasPb+1zL9l1E95rIOXnc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -325,7 +313,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			x2LN+wWuALO+tSPxpsyxaocAo/w=
+			3huVfsw0emzzY1rBHSYO9Cz031o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -334,7 +322,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NITo8REIeLJFuyI5wSEyssoKL5o=
+			SowI2ypq/+DZmqwT0pAjT405gdU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -352,7 +340,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LQ6SJoLaULyDuCF7JbZzyej/iMM=
+			hD8Aaz73uXJuQ4bLoeCSg7KiRNI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -407,35 +395,35 @@
 		</data>
 		<key>FZZInfoCell.nib</key>
 		<data>
-		ay5S0aq5p/k5V9/ZdNnhWUHpSLw=
+		so+1naeD+mbI8B5mFi7F7W7iQWE=
 		</data>
 		<key>FZZInfoCreditViewController.nib</key>
 		<data>
-		6QeBPIfpg32NHMsMwHA8qZs0S3Y=
+		XU6ahHzmyYkIoYNq77wH/Dj/m2I=
 		</data>
 		<key>FZZInfoViewController.nib</key>
 		<data>
-		GoX83+ZPZ6Bg9XhuHBXVVXTsPcU=
+		lARY+i1hweZ+P5bhonDBsG+cfJo=
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/ChameleonFramework</key>
 		<data>
-		y9iSVLceSqll0H5AkqZ6nKC+0jY=
+		4F16Qap/gCn4mSpLMWz8AmBYlws=
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/Info.plist</key>
 		<data>
-		7m5fDhXYk1S/kbiW4b91jHNx7qM=
+		drHd55TB5mzG7lyoiqoK88EMzf0=
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
-		ru49lLdK+Ggpk2iBqisl80HCOhE=
+		zLKDVF5sxTVannW3LuTr4ophvig=
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/Info.plist</key>
 		<data>
-		vTkvM5qW2Oekq0r7dIIsVYGUZvQ=
+		z2trRTFo9a4q65QBWS1BSvT7PFE=
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD</key>
 		<data>
-		qTFloQ55WkOD/cidxT2BQSvIAxc=
+		OKNy+qxXaGVH033S3SKKQhkIUgY=
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
 		<data>
@@ -487,7 +475,7 @@
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources</key>
 		<data>
-		/ALh0Jga0JwIU4oJgNeYVf1pBnY=
+		JaVpoLJeVjzCag4KmGd7MVBhVZA=
 		</data>
 		<key>Like.png</key>
 		<data>
@@ -566,18 +554,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>fzzicon.png</key>
-		<data>
-		rRWmXe8ouIlm+4kyLGXtRq5FhNo=
-		</data>
-		<key>fzzicon@2x.png</key>
-		<data>
-		8wNJXUpzlo7Zfclmp104sJFw2KI=
-		</data>
-		<key>fzzicon@3x.png</key>
-		<data>
-		QneOVpchQxJntpihVBGk/6TUuzI=
-		</data>
 		<key>icon350x350.png</key>
 		<data>
 		59YQCtTtOkw4NxQa0LgV3jR2npg=

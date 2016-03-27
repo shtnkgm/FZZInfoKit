@@ -250,9 +250,22 @@ UINavigationControllerDelegate>
     activityViewController.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError){
         if(completed){
             if(!activityError){
-                [SVProgressHUD showSuccessWithStatus:nil];
+                if([NSThread isMainThread]){
+                    [SVProgressHUD showSuccessWithStatus:nil];
+                }else{
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [SVProgressHUD showSuccessWithStatus:nil];
+                    });
+                }
+                
             }else{
-                [SVProgressHUD showErrorWithStatus:activityError.description];
+                if([NSThread isMainThread]){
+                    [SVProgressHUD showErrorWithStatus:activityError.description];
+                }else{
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [SVProgressHUD showErrorWithStatus:activityError.description];
+                    });
+                }
             }
         }else{
             //何もしない

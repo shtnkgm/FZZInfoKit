@@ -68,7 +68,7 @@
     __weak typeof(self) weakSelf = self;
     
     //モーダルビューを閉じる
-    [(UIViewController *)weakSelf dismissViewControllerAnimated:YES completion:^{
+    [(UIViewController *)self.delegate dismissViewControllerAnimated:YES completion:^{
         [weakSelf.delegate FZZInfoKitDidClose];
     }];
     

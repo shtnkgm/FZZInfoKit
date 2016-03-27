@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		98lSPyJPx+M7MFxCh1UQCp1MIWQ=
+		GzepgNT1vWSJdhpp/JMaNYb+SC0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -20,13 +20,27 @@
 	<key>files2</key>
 	<dict>
 		<key>Headers/Pods-umbrella.h</key>
-		<data>
-		XaJZE/FmgRAW8w6b2CNTZfOI9cs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			XaJZE/FmgRAW8w6b2CNTZfOI9cs=
+			</data>
+			<key>hash2</key>
+			<data>
+			m5dq+5pVxxHE7BTBT/14iqLaR5mXuaFG+O+sOsPuqAM=
+			</data>
+		</dict>
 		<key>Modules/module.modulemap</key>
-		<data>
-		pwwCR3l1h5RXc42VEf+9zR11HY4=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			pwwCR3l1h5RXc42VEf+9zR11HY4=
+			</data>
+			<key>hash2</key>
+			<data>
+			QXVvhuVlkp5GelsqjK+wXCnsyU8WxGnQ/McVFxp70F8=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>

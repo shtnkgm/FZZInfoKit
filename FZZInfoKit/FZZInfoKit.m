@@ -65,7 +65,13 @@
 }
 
 - (IBAction)doneButtonDidPushed:(id)sender{
-    [_delegate FZZInfoKitWillClose];
+    __weak typeof(self) weakSelf = self;
+    
+    //モーダルビューを閉じる
+    [(UIViewController *)weakSelf dismissViewControllerAnimated:YES completion:^{
+        [weakSelf.delegate FZZInfoKitDidClose];
+    }];
+    
 }
 
 - (UIImage *)imageNamedWithoutCache:(NSString *)name{

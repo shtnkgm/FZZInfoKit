@@ -25,6 +25,6 @@
 
 @protocol FZZInfoKitDelegate
 
-- (void)FZZInfoKitWillClose;
+- (void)FZZInfoKitDidClose;
 
 @end

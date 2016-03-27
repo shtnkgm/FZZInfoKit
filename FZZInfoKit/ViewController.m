@@ -46,9 +46,8 @@
     _opend = YES;
 }
 
-- (void)FZZInfoKitWillClose{
-    [self dismissViewControllerAnimated:YES
-                             completion:nil];
+- (void)FZZInfoKitDidClose{
+
 }
 
 - (void)didReceiveMemoryWarning {

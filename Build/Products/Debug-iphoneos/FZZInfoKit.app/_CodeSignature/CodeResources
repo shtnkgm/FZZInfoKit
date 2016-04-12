@@ -120,7 +120,7 @@
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/ChameleonFramework</key>
 		<data>
-		jgryxMDfKaLn1wy2T5CpxCyHFzs=
+		SVaR/7Vd+tj5uWWtyLwx7tWaVhk=
 		</data>
 		<key>Frameworks/ChameleonFramework.framework/Info.plist</key>
 		<data>
@@ -136,7 +136,7 @@
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD</key>
 		<data>
-		jFyJPSomTeap1ZTbEetCgXVfR40=
+		kQJ8rjcd7Z6rMTtLWNVx2HHKTUc=
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
 		<data>
@@ -264,7 +264,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		IpiVhdA95purG5TzKkB9szG9qlw=
+		jLX7jZ3CYhjmIsYPAb6UUJYq2kU=
 		</data>
 		<key>en.lproj/FZZInfoKitLocalizable.strings</key>
 		<dict>
@@ -538,11 +538,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jgryxMDfKaLn1wy2T5CpxCyHFzs=
+			SVaR/7Vd+tj5uWWtyLwx7tWaVhk=
 			</data>
 			<key>hash2</key>
 			<data>
-			7ckxGJ9j4//valss2laV1fQFv0ld/AdxibAjhNhiScw=
+			87M79XpJhYF0HyT1rRGKMVKd81PVK8tE88FczXSTi3s=
 			</data>
 		</dict>
 		<key>Frameworks/ChameleonFramework.framework/Info.plist</key>
@@ -582,11 +582,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jFyJPSomTeap1ZTbEetCgXVfR40=
+			kQJ8rjcd7Z6rMTtLWNVx2HHKTUc=
 			</data>
 			<key>hash2</key>
 			<data>
-			vRYbRiVcjBT8xx2hyhJnAfnLo5YYGH++Pyc9aQ14agU=
+			pWxRLjS2ylpvMNoG+lErSOO9dtstf233qgTyyVMOgmk=
 			</data>
 		</dict>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
@@ -912,11 +912,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IpiVhdA95purG5TzKkB9szG9qlw=
+			jLX7jZ3CYhjmIsYPAb6UUJYq2kU=
 			</data>
 			<key>hash2</key>
 			<data>
-			OJrClSlt1P+tA3GPNYNp2//ePXUgOB1f9mhCWUcN6U4=
+			vTcjTfFs5+f4VL8DyzxSjG+FAXtMx27vbW81fSyfmnI=
 			</data>
 		</dict>
 		<key>en.lproj/FZZInfoKitLocalizable.strings</key>

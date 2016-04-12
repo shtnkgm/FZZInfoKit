@@ -72,7 +72,7 @@ static NSString *const kInfoFormID = @"entry_724500489";
 - (void)addSection:(NSInteger)sectionIndex name:(NSString *)name{
     
     NSMutableDictionary *section = [NSMutableDictionary new];
-    section[kName] = [name localized];
+    section[kName] = [name FZZInfoKitLocalized];
     section[kRows] = [NSMutableArray array];
     
     [_data addObject:section];
@@ -85,8 +85,8 @@ static NSString *const kInfoFormID = @"entry_724500489";
                    file:(NSString *)file{
     
     FZZInfoViewModelEntity *entity = [FZZInfoViewModelEntity new];
-    entity.name = [name localized];
-    entity.value = [value localized];
+    entity.name = [name FZZInfoKitLocalized];
+    entity.value = [value FZZInfoKitLocalized];
     entity.url = url;
     entity.file = file;
     

@@ -236,7 +236,7 @@ UINavigationControllerDelegate>
 # pragma mark ActivityViewController
 
 - (void)useActivityViewController{
-    NSString *shareText = [NSString stringWithFormat:@"%@\n\n%@\n%@",_model.appName,[@"Download on the AppStore" localized],_model.appstoreURL];
+    NSString *shareText = [NSString stringWithFormat:@"%@\n\n%@\n%@",_model.appName,[@"Download on the AppStore" FZZInfoKitLocalized],_model.appstoreURL];
     NSArray *activityItems = @[shareText];
     
     //非表示にするアクティビティ

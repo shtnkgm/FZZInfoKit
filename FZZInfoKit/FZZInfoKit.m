@@ -14,6 +14,7 @@
 
 @interface FZZInfoKit ()
 
+@property (nonatomic, assign) BOOL letIconRound;
 @property (nonatomic, assign) BOOL animated;
 @property (nonatomic, strong) UINavigationController *navigationController;
 

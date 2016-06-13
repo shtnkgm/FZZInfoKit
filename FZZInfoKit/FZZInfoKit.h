@@ -13,7 +13,6 @@
 @interface FZZInfoKit : NSObject
 
 @property (nonatomic, weak) UIViewController <FZZInfoKitDelegate> *delegate;
-@property (nonatomic, assign) BOOL letIconRound;
 
 - (void)showInfoWithAppID:(NSString *)appID
                  iconName:(NSString *)iconName

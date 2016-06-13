@@ -35,11 +35,11 @@
         return;
     }
     
-    self.infoKit = [FZZInfoKit new];
-    self.infoKit.letIconRound = YES;
+    self.infoKit = [FZZInfoKit new];    
     [self.infoKit showInfoWithAppID:@"480099135"
                            iconName:@"icon350x350"
                             appName:@"Roundgraphy"
+                       letIconRound:YES
                            delegate:self
                            animated:YES];
     

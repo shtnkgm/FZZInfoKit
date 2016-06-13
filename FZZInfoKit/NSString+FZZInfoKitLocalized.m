@@ -11,7 +11,7 @@
 @implementation NSString (FZZInfoKitLocalized)
 
 - (instancetype)FZZInfoKitLocalized{
-    NSLog(@"%@:%s",self,__func__);
+    //NSLog(@"%@:%s",self,__func__);
     NSString *localizedFileName = @"FZZInfoKitLocalizable";
     NSURL *bundleURL = [[NSBundle mainBundle] URLForResource:@"FZZInfoKit" withExtension:@"bundle"];
     NSBundle *bundle;

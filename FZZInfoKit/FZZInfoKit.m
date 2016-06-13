@@ -30,6 +30,7 @@
 - (void)showInfoWithAppID:(NSString *)appID
                  iconName:(NSString *)iconName
                   appName:(NSString *)appName
+             letIconRound:(BOOL)letIconRound
                  delegate:(UIViewController *)delegate
                  animated:(BOOL)animated{
     
@@ -37,6 +38,7 @@
     
     self.delegate = weakDelegate;
     self.animated = animated;
+    self.letIconRound = letIconRound;
     
     FZZInfoViewController *viewController = [FZZInfoViewController new];
     viewController.appID = appID;

@@ -18,6 +18,7 @@
 - (void)showInfoWithAppID:(NSString *)appID
                  iconName:(NSString *)iconName
                   appName:(NSString *)appName
+             letIconRound:(BOOL)letIconRound
                  delegate:(UIViewController *)delegate
                  animated:(BOOL)animated;
 

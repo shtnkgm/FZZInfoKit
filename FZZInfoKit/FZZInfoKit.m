@@ -8,14 +8,16 @@
 
 #import "FZZInfoKit.h"
 
+//MY
 #import "FZZInfoViewController.h"
+#import "FZZInfoKitUtility.h"
 #import "NSString+FZZInfoKitLocalized.h"
+
+//OSS
 #import "Chameleon.h"
 
 @interface FZZInfoKit ()
 
-@property (nonatomic, assign) BOOL letIconRound;
-@property (nonatomic, assign) BOOL animated;
 @property (nonatomic, strong) UINavigationController *navigationController;
 
 @end
@@ -24,7 +26,6 @@
 
 - (instancetype)init{
     self = [super init];
-    self.letIconRound = NO;
     return self;
 }
 
@@ -38,23 +39,22 @@
     __weak id weakDelegate = delegate;
     
     self.delegate = weakDelegate;
-    self.animated = animated;
-    self.letIconRound = letIconRound;
     
     FZZInfoViewController *viewController = [FZZInfoViewController new];
     viewController.appID = appID;
     viewController.iconName = iconName;
     viewController.appName = appName;
-    viewController.letIconRound = _letIconRound;
+    viewController.letIconRound = letIconRound;
     
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.navigationController.navigationBar.tintColor = FlatWhite;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithWhite:0.05 alpha:1];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: FlatWhite};
     self.navigationController.navigationBar.translucent = YES;
     
     //閉じるボタンの作成
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithImage:[self imageNamedWithoutCache:@"Delete"]
+    UIImage *buttonImage = [FZZInfoKitUtility imageNamedWithoutCache:@"Delete"];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithImage:buttonImage
                                                                    style:UIBarButtonItemStylePlain
                                                                   target:self
                                                                   action:@selector(doneButtonDidPushed:)];
@@ -62,12 +62,12 @@
     self.navigationController.navigationBar.topItem.rightBarButtonItem = doneButton;
     
     
-    [_delegate presentViewController:self.navigationController
+    [self.delegate presentViewController:self.navigationController
                             animated:animated
                           completion:nil];
 }
 
-- (IBAction)doneButtonDidPushed:(id)sender{
+- (void)doneButtonDidPushed:(id)sender{
     __weak typeof(self) weakSelf = self;
     
     //モーダルビューを閉じる
@@ -75,13 +75,6 @@
         [weakSelf.delegate FZZInfoKitDidClose];
     }];
     
-}
-
-- (UIImage *)imageNamedWithoutCache:(NSString *)name{
-    NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
-    NSString *imagePath = [bundlePath stringByAppendingPathComponent:name];
-    UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
-    return image;
 }
 
 @end

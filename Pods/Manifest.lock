@@ -2,14 +2,25 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
-  - SVProgressHUD (HEAD based on 2.0)
+  - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
   - ChameleonFramework
-  - SVProgressHUD (HEAD)
+  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+
+EXTERNAL SOURCES:
+  SVProgressHUD:
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  SVProgressHUD:
+    :commit: 6ca5946638ed5bbf8ae36e3c3191901f76bf173b
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  SVProgressHUD: e9e7c893686a20da55a28015ed384d9425e15479
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: a9b931e30e2facb4481d42a62d4605ba071c07ef
+
+COCOAPODS: 1.0.1

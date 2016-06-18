@@ -15,7 +15,7 @@ static NSString *const kName = @"name";
 static NSString *const kRows = @"rows";
 
 static NSString *const kDeveloperID = @"457011383";
-static NSString *const kSupportSiteURL = @"http://bit.ly/appstoresupport";
+static NSString *const kPortfolioSiteURL = @"http://bit.ly/appstoreshtnkgm";
 static NSString *const kPrivacyPolicyURL = @"http://bit.ly/wprivacypolicy";
 
 //クエリをつけるのでURL短縮NG
@@ -32,7 +32,7 @@ static NSString *const kInfoFormID = @"entry_724500489";
 @property (nonatomic, strong) NSMutableArray *data;
 @property (nonatomic, readonly) NSString *appID;
 @property (nonatomic, readonly) NSString *infoFormID;
-@property (nonatomic, readonly) NSString *supportSiteURL;
+@property (nonatomic, readonly) NSString *portfolioSiteURL;
 @property (nonatomic, readonly) NSString *developerID;
 @property (nonatomic, readonly) NSString *bugReportURL;
 @property (nonatomic, readonly) NSString *bugReportURLWithOption;
@@ -54,7 +54,7 @@ static NSString *const kInfoFormID = @"entry_724500489";
         _appName = appName;
         _appVersion = [FZZInfoKitUtility appVersion];
         _developerID = kDeveloperID;
-        _supportSiteURL = kSupportSiteURL;
+        _portfolioSiteURL = kPortfolioSiteURL;
         _bugReportURL = kBugReportURL;
         _privacyPolicyURL = kPrivacyPolicyURL;
         _appstoreURL = [NSString stringWithFormat:@"%@/id%@",kAppStoreBaseURL,_appID];
@@ -136,7 +136,7 @@ static NSString *const kInfoFormID = @"entry_724500489";
     [self addRowInSection:sectionIndex
                      name:@"Portfolio Site"
                     value:nil
-                      url:_supportSiteURL
+                      url:_portfolioSiteURL
                      file:@"Briefcase"];
 }
 

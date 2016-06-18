@@ -26,9 +26,12 @@
 
 - (instancetype)init{
     self = [super init];
+    if (self) {
+        _tintColor = FlatWhite;
+        _barTintColor = [UIColor colorWithWhite:0.05 alpha:1];
+    }
     return self;
 }
-
 - (void)showInfoWithAppID:(NSString *)appID
                  iconName:(NSString *)iconName
                   appName:(NSString *)appName
@@ -47,9 +50,9 @@
     viewController.letIconRound = letIconRound;
     
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    self.navigationController.navigationBar.tintColor = FlatWhite;
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithWhite:0.05 alpha:1];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: FlatWhite};
+    self.navigationController.navigationBar.tintColor = self.tintColor;
+    self.navigationController.navigationBar.barTintColor = self.barTintColor;
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: self.tintColor};
     self.navigationController.navigationBar.translucent = YES;
     
     //閉じるボタンの作成

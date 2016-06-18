@@ -12,7 +12,9 @@
 
 @interface FZZInfoKit : NSObject
 
-@property (nonatomic, weak) UIViewController <FZZInfoKitDelegate> *delegate;
+@property (strong, nonatomic) UIColor *tintColor;
+@property (strong, nonatomic) UIColor *barTintColor;
+@property (weak, nonatomic) UIViewController <FZZInfoKitDelegate> *delegate;
 
 - (void)showInfoWithAppID:(NSString *)appID
                  iconName:(NSString *)iconName

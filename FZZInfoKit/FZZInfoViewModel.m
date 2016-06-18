@@ -15,10 +15,14 @@ static NSString *const kName = @"name";
 static NSString *const kRows = @"rows";
 
 static NSString *const kDeveloperID = @"457011383";
-static NSString *const kSupportSiteURL = @"http://shtnkgm.github.io";
-static NSString *const kPrivacyPolicyURL = @"http://shtnkgm.github.io/privacy.html";
+static NSString *const kSupportSiteURL = @"http://bit.ly/appstoresupport";
+static NSString *const kPrivacyPolicyURL = @"http://bit.ly/wprivacypolicy";
+
+//クエリをつけるのでURL短縮NG
 static NSString *const kBugReportURL = @"https://docs.google.com/forms/d/1jAD7A1ch6D1SXbxf3hPzF15hicTbxKadaHf03axRbQk/viewform";
+
 static NSString *const kAppStoreBaseURL = @"https://itunes.apple.com/app";
+
 static NSString *const kReviewPageBaseURL = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews";
 static NSString *const kOtherAppsURL = @"itms-apps://itunes.com/apps/shotanakagami";
 static NSString *const kInfoFormID = @"entry_724500489";
@@ -43,7 +47,7 @@ static NSString *const kInfoFormID = @"entry_724500489";
 
 - (instancetype)initWithAppID:(NSString *)appID appName:(NSString *)appName{
     self = [super init];
-    if (self) {
+    if (self){
         _data = [NSMutableArray array];
         
         _appID = appID;
@@ -94,7 +98,7 @@ static NSString *const kInfoFormID = @"entry_724500489";
 }
 
 
-- (void)setSupportDictionary {
+- (void)setSupportDictionary{
     NSInteger sectionIndex = [_data count];
     
     [self addSection:sectionIndex name:@"User Feedback"];
@@ -118,7 +122,7 @@ static NSString *const kInfoFormID = @"entry_724500489";
                      file:@"Talk"];
 }
 
-- (void)setDeveloperDictionary {
+- (void)setDeveloperDictionary{
     NSInteger sectionIndex = [_data count];
     
     [self addSection:sectionIndex name:@"Creater"];
@@ -137,7 +141,7 @@ static NSString *const kInfoFormID = @"entry_724500489";
 }
 
 
-- (void)setAppInfoDictionary {
+- (void)setAppInfoDictionary{
     NSInteger sectionIndex = [_data count];
     
     [self addSection:sectionIndex name:@"AppInfo"];
